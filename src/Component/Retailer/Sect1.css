@@ -1,0 +1,88 @@
+main{
+    padding: vh 22vh 0;
+  }
+  
+  .sect1{
+      min-height: 20vh;
+      width: 100%;
+      padding:0vh 22vh 0 22vh;
+      margin-top: 10vh;
+      text-align: center;
+      margin-bottom: 15vh;
+      font-family: sans-serif;
+    }
+    .sect1 h3{
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 2vh;
+      font-family: sans-serif;
+    }
+    .sect1 h1{
+      color: #087373;
+      font-family: sans-serif;
+      font-size: 3rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 4vh;
+      position: relative;
+    }
+    /* .sect1 h1:before{
+      content: "";
+      display: block;
+      width: 260px;
+      height: 2px;
+      background: #000;
+      position: absolute;
+      left: -60px;
+      top: 50%;
+    }
+    .sect1 h1::after{
+      content: "";
+      display: block;
+      width: 260px;
+      height: 2px;
+      background: #000;
+      position: absolute;
+      right: -60px;
+      top: 50%;
+    } */
+  @media(max-width:1300px){
+    main{
+      padding: 5vh 15vh 0 15vh;
+    }
+  }
+  
+  @media(max-width :1140px){
+    .sect1{
+      padding: 0;
+    }
+  }
+  
+  @media(max-width:1200px){
+    main{
+      padding: 5vh  10vh 0 10vh;
+    }
+  }
+  
+  @media(max-width:600px){
+    .sect1 h3{
+      font-size: 1.5rem;
+     }
+    .sect1 h1{
+      font-size: 7vh;
+     
+    }
+    .sect1 h1:before{
+      display: none;
+    }
+    .sect1 h1::after{
+      display: none;
+
+    }
+  }
+  
+  @media(max-width:500px){
+    main{
+      padding: 5vh 2vh 0vh 2vh;
+    }
+  } 

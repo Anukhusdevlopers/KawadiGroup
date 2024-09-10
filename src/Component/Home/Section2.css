@@ -1,0 +1,105 @@
+.changa-one-regular {
+  font-family: "Changa One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.p2Left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.p2Left img{
+  width: 30vw;
+  max-height: 55vh;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.page2{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p2Right{
+  padding: 0 5vh ;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  margin: 0 4vh;
+
+}
+.abouth1{
+  font-family: sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  margin: 10vh 0 5vh;
+  color: #087373;
+  width: 100%;
+}
+.p2Right p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  color: #333;
+  line-height: 25px;
+  font-size: 21px;
+}
+
+@media(max-width:850px){
+  .page2{
+    flex-direction: column;
+    padding: 0vh;
+  }
+  .abouth1{
+    text-align: center;
+  }
+  .p2Right{
+    padding: 0;
+    margin: 0;
+  }
+  .p2Left{
+    width: 100%;
+  }
+  .p2Left img{
+    width: 70%;
+  }
+}
+@media(max-width:700px){
+  .p2Left img{
+    width: 80%;
+  }
+  .abouth1{
+    font-size: 3.5rem;
+  }
+  .p2Right p{
+    font-size: 18px;
+    width: 100%;
+  }
+  
+}
+
+@media(max-width:400px){
+  .abouth1{
+    font-size: 3rem;
+  }
+  
+}
+
+@media(min-height:1200px){
+
+  .p2Right{
+    padding: 0;
+    margin-right: 0;
+  }
+  .p2Left img{
+    height: 30vh;
+  }
+  .abouth1{
+    margin-top: 5vh;
+  }
+}

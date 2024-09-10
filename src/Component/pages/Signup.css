@@ -1,0 +1,60 @@
+.logininput::placeholder {
+    color: rgb(201, 201, 201);
+    opacity: 1; /* Firefox */
+    font-size: 1.5rem;
+  }
+  
+ .logininput ::-ms-input-placeholder { /* Edge 12 -18 */
+    color: rgb(214, 212, 212);
+  }
+
+  .loginbg #loginh1{
+    font-size: 4rem;
+  }
+
+.signupbg {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../assets/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.signupbg .container {
+    height: 80vh;
+    width: 80vw;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between
+}
+.signupbg .container .formpart input{
+    width: 90%;
+}
+
+
+@media(max-width:1100px) {
+    .signupbg .container {
+        width: 100vw ;
+    }
+}
+@media(max-width:1000px){
+    .signupbg .container .formpart{
+        position: relative;
+        left: -27%;
+    }
+    .signupbg .container .txtpart{
+        visibility: hidden;
+    }
+
+}
+@media(max-width:450px){
+    .signupbg .container .formpart input{
+        width: 80%;
+    }
+    .loginbg #loginh1{
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,255 @@
+
+.swiper {
+  width: 100%;
+  height: 70h; 
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.swiper-slide img {
+  display: block;
+  border-radius: 20px;
+  height: 70vh;
+  width: 95% ;
+}
+
+@media(max-width:500px){
+  .swiper-slide img {
+      height: 50vh;
+  }
+  .swiper-slide {
+      margin-top: 2vh;
+  }
+}
+
+
+/* Text Overlay */
+.text-overlay {
+position: absolute;
+top: 59%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+z-index: 3; 
+color: white;
+width: 60%;
+}
+
+/* Heading Styles */
+.heading {
+font-size: 2rem;
+font-weight: bold;
+margin-bottom: 2vh;
+opacity: 0;
+animation: headingMove 2s forwards;
+color:#c2f8f8;
+}
+
+@keyframes headingMove {
+0% { opacity: 0; top: -50px; }
+100% { opacity: 1; top: 0; }
+}
+
+/* Subheading Styles */
+.subheading {
+font-size: 4rem;
+margin-bottom: 2vh;  
+color:#c2f8f8;
+opacity: 0;
+animation: subheadingMove 2s forwards;
+animation-delay: 0.5s; 
+font-family: sans-serif;
+}
+
+@keyframes subheadingMove {
+0% { opacity: 0; bottom: -50px; }
+100% { opacity: 1; bottom: 0; }
+}
+
+/* Paragraph Styles */
+.paragraph {  
+color:#c2f8f8;
+font-size: 1.4rem;
+line-height: 22px;
+font-weight: 500;
+margin-top: 10px;
+animation: paragraphFade 2s forwards;
+animation-delay: 1s;
+padding: 5px 10px; /* Add padding to improve readability */
+border-radius: 5px; 
+}
+
+@keyframes paragraphFade {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+/* Book Now Button */
+.book_btn {
+background-color: #087373;
+padding: 2.5vh 5vh;
+border: none;
+border-radius: 12px;
+font-size: 1.2rem;
+margin: 4vh 0;
+color: white;
+}
+
+/* Popup Form */
+.popup-form {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: #80b6b6f7; 
+padding: 20px;
+border: 1px solid #ddd;
+border-radius: 10px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+width: 90%;
+max-width: 500px;
+max-height: 90vh; 
+overflow-y: auto; 
+z-index: 1000;
+}
+
+.popup-form h2 {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.input {
+display: flex;
+gap: 10px;
+margin-bottom: 10px;
+flex-wrap: wrap;
+}
+
+.input input, .input select {
+padding: 10px;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 5px;
+flex: 1;
+max-width: 100%; 
+box-sizing: border-box;
+}
+
+.input label {
+width: 45px;
+display: flex;
+align-items: center;
+gap: 5px;
+}
+
+.submit-btn, .close-btn {
+padding: 10px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+width: 100px;
+}
+
+.submit-btn {
+background-color: green;
+color: white;
+}
+
+.close-btn {
+background-color: red;
+color: white;
+}
+
+/* Thank You Popup */
+.thank-you-popup {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: white;
+padding: 20px;
+border: 1px solid #ddd;
+border-radius: 10px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+z-index: 1000;
+}
+
+.thank-you-popup h2 {
+margin-bottom: 20px;
+}
+
+.thank-you-popup h4 {
+color: rgb(0, 140, 255);
+cursor: pointer;
+text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+.input {
+  flex-direction: row; 
+}
+}
+
+@media (max-width: 767px) {
+.input {
+  flex-direction: column;
+}
+
+.text-overlay h3 {
+  font-size: 1.5rem;
+}
+
+.text-overlay h1 {
+  font-size: 3.5rem;
+}
+
+.text-overlay h4 {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.book_btn {
+  font-size: 1rem;
+}
+}
+
+@media(max-width: 500px) {
+.text-overlay{
+  width: 90%;
+}
+.popup-form {
+  width: 95%; 
+  padding: 10px;
+}
+
+.input select {
+  max-height: 150px; 
+  overflow-y: auto; 
+}
+.text-overlay h4{
+  font-size: 0;
+}
+.book_btn {
+  margin: 0vh 0vh 5vh 0vh;
+ padding: 2vh 3.5vh;
+}
+}
+
+@media(max-width: 410px) {
+.section1 {
+  margin-bottom: 1vh;
+}
+.text-overlay h1 {
+  font-size: 3rem;
+}
+}
