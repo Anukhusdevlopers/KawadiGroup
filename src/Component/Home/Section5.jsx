@@ -1,44 +1,113 @@
-import React, { useState } from 'react'
-import './Section5.css'
-
-import ScrollTrigger from 'react-scroll-trigger';
+import React, { useState } from 'react';
+import './Section5.css';
 import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 
 const Section5 = () => {
+  // Separate state for each count to control the start of each animation
+  const [startCount, setStartCount] = useState({
+    happyCustomers: false,
+    customerSatisfaction: false,
+    totalScrap: false,
+    yearsOfBusiness: false,
+  });
 
-    const [counton, setCounton] = useState(0);
+  // Handler to update the state when an element is in view
+  const handleViewChange = (key) => {
+    setStartCount((prevState) => ({
+      ...prevState,
+      [key]: true,
+    }));
+  };
 
+  // Hook configurations for each section
+  const { ref: happyRef, inView: happyInView } = useInView({
+    threshold: 0.3,
+    triggerOnce: false,
+    onChange: (inView) => {
+      if (inView) handleViewChange('happyCustomers');
+    },
+  });
 
-    return (
-        <>
-            <div className="section5">
-                <div className="pt">
-                    <ScrollTrigger onEnter={() => setCounton(true)} onExit={() => { setCounton(true) }} >
-                        <h1>
-                            {counton &&
-                               <CountUp start={0} end={100} duration={2} delay={0}/>
-                            }
-                        </h1>
-                    </ScrollTrigger>
+  const { ref: satisfactionRef, inView: satisfactionInView } = useInView({
+    threshold: 0.3,
+    triggerOnce: false,
+    onChange: (inView) => {
+      if (inView) handleViewChange('customerSatisfaction');
+    },
+  });
 
-                    {/* <h1 style={{ fontSize: '3rem' }}>5000+</h1> */}
-                    <p style={{ fontSize: '1.2rem', marginTop: '1vh' }}>Happy Customer</p>
-                </div>
-                <div className="pt">
-                    <h1 style={{ fontSize: '3rem' }}>100%</h1>
-                    <p style={{ fontSize: '1.2rem', marginTop: '1vh' }}>Customer Satisfaction</p>
-                </div>
-                <div className="pt">
-                    <h1 style={{ width: '70vw', textAlign: 'center' }}>50000 kg </h1>
-                    <p style={{ fontSize: '1.2rem', width: '70vw', textAlign: 'center', marginTop: '1vh' }}>Total Scrap Recycled</p>
-                </div>
-                <div className="pt">
-                    <h1 style={{ fontSize: '3rem' }}>8+</h1>
-                    <p style={{ marginTop: '1vh' }}>Years of business</p>
-                </div>
-            </div>
-        </>
-    )
-}
+  const { ref: scrapRef, inView: scrapInView } = useInView({
+    threshold: 0.3,
+    triggerOnce: false,
+    onChange: (inView) => {
+      if (inView) handleViewChange('totalScrap');
+    },
+  });
 
-export default Section5
+  const { ref: businessRef, inView: businessInView } = useInView({
+    threshold: 0.3,
+    triggerOnce: false,
+    onChange: (inView) => {
+      if (inView) handleViewChange('yearsOfBusiness');
+    },
+  });
+
+  return (
+    <div className="section5">
+      {/* Happy Customers */}
+      <div className="pt" ref={happyRef}>
+        <h1>
+          {happyInView ? (
+            <CountUp start={0} end={5000} duration={2} suffix="+" />
+          ) : (
+            '5000+'
+          )}
+        </h1>
+        <p style={{ fontSize: '1.2rem', marginTop: '1vh' }}>Happy Customer</p>
+      </div>
+
+      {/* Customer Satisfaction */}
+      <div className="pt" ref={satisfactionRef}>
+        <h1>
+          {satisfactionInView ? (
+            <CountUp start={0} end={100} duration={2} suffix="%" />
+          ) : (
+            '100%'
+          )}
+        </h1>
+        <p style={{ fontSize: '1.2rem', marginTop: '1vh' }}>
+          Customer Satisfaction
+        </p>
+      </div>
+
+      {/* Total Scrap Recycled */}
+      <div className="pt" ref={scrapRef}>
+        <h1>
+          {scrapInView ? (
+            <CountUp start={0} end={50000} duration={2} suffix=" kg" />
+          ) : (
+            '50000 kg'
+          )}
+        </h1>
+        <p style={{ fontSize: '1.2rem', marginTop: '1vh' }}>
+          Total Scrap Recycled
+        </p>
+      </div>
+
+      {/* Years of Business */}
+      <div className="pt" ref={businessRef}>
+        <h1>
+          {businessInView ? (
+            <CountUp start={0} end={8} duration={2} suffix="+" />
+          ) : (
+            '8+'
+          )}
+        </h1>
+        <p style={{ marginTop: '1vh' }}>Years of Business</p>
+      </div>
+    </div>
+  );
+};
+
+export default Section5;
