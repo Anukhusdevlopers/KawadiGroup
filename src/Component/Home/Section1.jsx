@@ -49,7 +49,7 @@ const Section1 = () => {
         </div>
         <div className="input">
           <select name="" id="">
-            <option value="">Type  Scrap</option>
+            <option value="">Type of Scrap</option>
             <option value="">Newspaper</option>
             <option value="">Cardboard</option>
             <option value="">Books</option>
