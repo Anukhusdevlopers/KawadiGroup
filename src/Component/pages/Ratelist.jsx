@@ -38,8 +38,8 @@ const Ratelist = () => {
     <>
       <Navbar userdisplay="none" />
 
-      <div className='ratelist'>
-        <div>
+      <div >
+        <div className='ratelist'> 
           <h1>Scrap Rates</h1>
           <div className="buttoncontainer">
             <button onClick={showAll}>All</button>
@@ -51,7 +51,9 @@ const Ratelist = () => {
             <button>Vehicle</button>
           </div>
 
-          <div className="boxcontainer">
+        </div>
+        
+        <div className="boxcontainer">
             {displayData.map((val) => (
               <div className="box" key={val.id}>
                 <img src={val.img} alt={val.name} />
@@ -60,9 +62,9 @@ const Ratelist = () => {
               </div>
             ))}
           </div>
-        </div>
-        <Footer />
       </div>
+      <Footer />
+
     </>
   );
 };
