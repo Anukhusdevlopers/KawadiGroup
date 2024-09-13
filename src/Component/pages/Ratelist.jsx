@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Navbar from '../Home/Navbar';
-import Footer from '../Home/Footer';
+import Footer from '../Home/footer';
 import './Ratelist.css';
 
 const Ratelist = () => {
