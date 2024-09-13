@@ -1,0 +1,118 @@
+.cardmission {
+    min-height: 20vh;
+    width: 100%;
+    padding: 2vh 0;
+    margin-bottom: 15vh;
+    display: flex;
+    border-radius: 12px;
+}
+
+.cardmission img {
+    height: 36vh;
+    width: 35%;
+    border-radius: 12px;
+    margin: 0 2vh;
+}
+
+.cardmission .text {
+    min-height: 36vh;
+    width: 100%;
+    padding: 2vh;
+    border-radius: 10px;
+    margin: 0 2vh;
+    display: flex;
+    flex-direction: column;
+}
+.cardmission .text h1{
+    font-size: 3rem;
+    font-family: sans-serif;
+}
+.cardmission .text p{
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    line-height: 1.2;
+}
+.cardmission:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+.cardmission:nth-child(4) {
+    flex-direction: row-reverse;
+    
+}
+.cardmission:nth-child(4) img{
+    margin-left: 10vh;
+    margin-right: 0;
+}
+.cardmission:nth-child(2) img{
+    margin-left: 10vh;
+    margin-right: 0;
+}
+
+@media(max-width:1000px) {
+    .cardmission img {
+        width: 50%;
+    }
+}
+
+
+@media(max-width:850px) {
+    .cardmission {
+        flex-direction: column;
+        align-items: center;
+        padding: 2vh 5vh;
+        margin-bottom: 5vh;
+    }
+
+    .cardmission .text {
+        text-align: center;
+        min-height: 30vh;
+    }
+    .cardmission img{
+        width: 80%;
+        height: 30vh;
+        margin-bottom: 4vh;
+    }
+    .cardmission:nth-child(2) {
+        flex-direction: column;
+    }
+    .cardmission:nth-child(4) {
+        flex-direction: column;
+    }
+}
+
+@media(max-width:600px){
+    .cardmission img{
+        width: 100%;
+        height: 25vh;
+       margin-right: 0;
+    }
+    .cardmission{
+        padding: 2vh; 
+    }
+    .cardmission .text{
+        min-height: 25vh;
+        margin: 0;
+        box-shadow: 0px 0px 0px;
+    }
+    .cardmission .text h1{
+        font-size: 2.5rem;
+    }
+    .cardmission .text p{
+        font-size: 1.2rem;
+    }
+}
+
+@media(min-height:1200px){
+    .cardmission img{
+        width: 250px;
+        min-height: 100%;
+     
+    }
+    .cardmission .text{
+        height: 25vh;
+        margin: 0;
+    }
+   
+    
+}

@@ -147,8 +147,7 @@ const Sec3 = () => {
         </div>
         <div className="imgbox">
           <h1>Scrapes</h1>
-          <div className=''>
-
+          <div className='box-img'>
           <img style={{display:mobilehide}} src="https://sc04.alicdn.com/kf/A87da347cd69c452c82d55f5dead4f8ecV.jpeg" alt="" />
           <img style={{display:location}} src="https://glescrap.com/wp-content/uploads/2022/08/Best-Scrap-Metal-Tools-From-GLE-Scrap.jpg" alt="" />
           <img style={{display:'initial'}} src="https://5.imimg.com/data5/GS/SH/MY-73496344/reusable-corrugated-boxes-500x500.jpg" alt="" />

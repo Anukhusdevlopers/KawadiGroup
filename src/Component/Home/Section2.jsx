@@ -1,6 +1,6 @@
 import React from 'react'
 import './Section2.css'
-import about from "../../assets/about.jpg"
+import about from "../../assets/about2.jpg"
 
 
 

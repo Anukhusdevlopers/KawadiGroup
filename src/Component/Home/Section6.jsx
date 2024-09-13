@@ -40,7 +40,7 @@ function Section6() {
       <div className="sect6">
         <div className="sect1_parts" ref={(el) => sectionRefs.current[0] = el}>
           <img src={calender} alt="Schedule Pickup" />
-          <h3>Schedule Pickup</h3>
+          <h3>Schedule pickup</h3>
           <p>
             The ScrapKart Schedule Pickup Scrap is a highly efficient and
             reliable scrap removal service that prioritizes the needs of
@@ -48,7 +48,7 @@ function Section6() {
           </p>
         </div>
         <div className="sect1_parts" ref={(el) => sectionRefs.current[1] = el}>
-          <img src={sect6} style={{ width: '180px' }} alt="Pickup Guy" />
+          <img src={sect6} alt="Pickup Guy" />
           <h3>Pickup Guy At Doorstep</h3>
           <p>
             Our professional will reach at your doorstep to collect as per

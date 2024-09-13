@@ -49,6 +49,7 @@ const Navbar = (val) => {
 
                 <div className='elem'>
                     <NavLink id='elemlink' to="/">Home</NavLink>
+                    <NavLink id='elemlink' to="/about">About</NavLink>
                     <NavLink id='elemlink' to="/ratelist">Rate List</NavLink>
                     <NavLink id='elemlink' to="">Feedback</NavLink>
                     <NavLink id='elemlink' to="/contact">Contact Us</NavLink>
@@ -72,6 +73,8 @@ const Navbar = (val) => {
             </nav>
             <div className="mobilenav" style={{ visibility: hidden }}>
                 <Link to="/" onClick={() => { toggleMenu(); mobilenavbarhide(); }}>Home</Link> <br />
+                
+                <NavLink id='elemlink' to="/about">About</NavLink><br />
                     <NavLink id='elemlink' to="/ratelist">Rate List</NavLink> <br />
                     <NavLink id='elemlink' to="">Feedback</NavLink> <br />
                 <Link to="/contact">Contact Us</Link> <br />

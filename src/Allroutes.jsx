@@ -6,6 +6,7 @@ import Login from "./Component/pages/Login";
 import Contact from "./Component/pages/Contact";
 import Retailer from "./Component/pages/Retailer";
 import Ratelist from "./Component/pages/Ratelist";
+import About from "./Component/pages/About"
 // import Navbar from "./Component/Home/Navbar";
 
 function Allroutes (){
@@ -15,6 +16,7 @@ function Allroutes (){
         <Router>
             <Routes>
                 <Route path="/" element={<Home/>} />
+                <Route path="/about" element={<About/>} />
                 <Route path="/Register" element={<Signup/>} />
                 <Route path="/wholesellerlogin" element={<Login name="Whole Seller" routelink="/wholesellerlogin"/>} />
                 <Route path="/Retailerlogin" element={<Login name="Retailer" routelink="/retailerpage"/>} />

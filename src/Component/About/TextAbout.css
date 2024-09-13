@@ -1,0 +1,34 @@
+.text{
+    min-height: 20vh;
+    width: 100%;
+    margin: 8vh 0 15vh 0;
+
+}
+.text h1{
+    font-size: 3rem;
+}
+.text p{
+    font-size: 1.1rem;
+    margin-top: 3vh;
+}
+
+
+@media(max-width:850px){
+    .text p span{
+        display: none;
+    }
+}
+@media(max-width:660px){
+    .text h1{
+        font-size: 2.5rem;
+    }
+    .text p{
+        font-size: 1.1rem;
+    }
+}
+
+@media(max-width:500px){
+    .text{
+        margin-top: 0vh;
+    }
+}
