@@ -10,8 +10,8 @@
   align-items: center;
 }
 .p2Left img{
-  width: 30vw;
-  max-height: 55vh;
+  width: 45vh;
+  max-height: 45vh;
   border-radius: 20px;
   object-fit: cover;
   object-position: center;
@@ -66,19 +66,21 @@
     width: 100%;
   }
   .p2Left img{
-    width: 70%;
+margin-bottom:10vh;
   }
 }
 @media(max-width:700px){
-  .p2Left img{
-    width: 80%;
-  }
+  
   .abouth1{
     font-size: 3.5rem;
   }
   .p2Right p{
     font-size: 18px;
     width: 100%;
+  }
+  .p2Left img{
+    width: 38vh;
+    height: 38vh;
   }
   
 }
@@ -98,8 +100,17 @@
   }
   .p2Left img{
     height: 30vh;
+    width: 30vh;
   }
   .abouth1{
     margin-top: 5vh;
+  }
+}
+@media(min-height:1250px){
+  .page2{
+    flex-direction: column;
+  }
+  .p2Left img{
+    margin-bottom: 5vh;
   }
 }

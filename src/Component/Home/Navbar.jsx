@@ -49,11 +49,11 @@ const Navbar = (val) => {
 
                 <div className='elem'>
                     <NavLink id='elemlink' to="/">Home</NavLink>
+                    <NavLink id='elemlink' to="/about">About</NavLink>
                     <NavLink id='elemlink' to="/ratelist">Rate List</NavLink>
-                    <NavLink id='elemlink' to="">Feedback</NavLink>
                     <NavLink id='elemlink' to="/contact">Contact Us</NavLink>
 
-                    <Link style={{display:val.logindisplay}} id='elemlink' onClick={loginoption} to="/">Customer <i className="ri-arrow-drop-down-fill"></i> </Link>
+                    <Link style={{display:val.logindisplay}} id='elemlink' onClick={loginoption} to="/">Customer </Link>
                     <div  style={{ opacity:logindisplay, zIndex: '9' }} className="loginover">
                         <Link to="/Retailerlogin" >Retailer </Link>
                         <Link to="/wholesellerlogin" >Whole Seller</Link>
@@ -72,8 +72,9 @@ const Navbar = (val) => {
             </nav>
             <div className="mobilenav" style={{ visibility: hidden }}>
                 <Link to="/" onClick={() => { toggleMenu(); mobilenavbarhide(); }}>Home</Link> <br />
+                
+                <NavLink id='elemlink' to="/about">About</NavLink><br />
                     <NavLink id='elemlink' to="/ratelist">Rate List</NavLink> <br />
-                    <NavLink id='elemlink' to="">Feedback</NavLink> <br />
                 <Link to="/contact">Contact Us</Link> <br />
 
                 <Link onClick={loginoption} style={{display:val.logindisplay}} to="">Customer <i className="ri-arrow-drop-down-fill"></i></Link>
