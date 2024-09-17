@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 .hero {
-    background-image: url('../../assets/header.jpg');
+    background-image: url('../../assets/header.png');
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: 68% 90vh;
+    background-size: contain;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -13,6 +13,7 @@
     margin-bottom: 90px;
     height: 95vh;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .hero-text {
@@ -70,4 +71,61 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .hero {
+        background-size: 50% 80vh;
+    }
+    .hero-text {
+        max-width: 50%;
+    }
+    .hero-text h1 {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        background-size: 100% auto;
+        height: auto;
+        padding: 20px;
+        justify-content: center;
+    }
+    .hero-text {
+        max-width: 90%;
+        padding: 0;
+        margin-top: 10vh;
+        text-align: center;
+    }
+    .hero-text h1 {
+        font-size: 40px;
+    }
+    .hero-text h3 {
+        font-size: 18px;
+    }
+    .hero-text p {
+        font-size: 12px;
+    }
+    .hero-text .btn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 32px;
+    }
+    .hero-text h3 {
+        font-size: 16px;
+    }
+    .hero-text p {
+        font-size: 12px;
+    }
+    .hero-text .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }
