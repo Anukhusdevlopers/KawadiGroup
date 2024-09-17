@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.hero {
+    background-image: url('../../assets/header.jpg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 68% 90vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1px 30px 1px 80px;
+    background-color: #fff;
+    margin-bottom: 90px;
+    height: 95vh;
+    position: relative;
+}
+
+.hero-text {
+    max-width: 40%;
+    z-index: 2;
+    padding-right: 50px;
+    margin-top: 15vh;
+}
+
+.hero-text h3 {
+    font-size: 22px;
+    color: #505050;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    color: #087373;
+}
+
+.hero-text p {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 100;
+    margin-top: 20px;
+    color: #4f4e4e;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.hero-text .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #087373;
+    border: none;
+    color: #fdffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.hero-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

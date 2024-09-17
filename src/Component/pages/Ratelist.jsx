@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import Navbar from '../Home/Navbar';
-import Footer from '../Home/footer';
+import Footer from '../Home/Footer';
 import './Ratelist.css';
 
 const Ratelist = () => {
@@ -45,9 +45,6 @@ const Ratelist = () => {
   ];
 
   const [displayData, setDisplayData] = useState(allData);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const boxContainerRef = useRef(null);
 
   const showAll = () => setDisplayData(allData);
   const showPapers = () => setDisplayData(boxdata.papers);
@@ -55,37 +52,6 @@ const Ratelist = () => {
   const showElectronics = () => setDisplayData(boxdata.electronics);
   const showMetals = () => setDisplayData(boxdata.metals);
   const showVehicle = () => setDisplayData(boxdata.vehicle);
-
-  const visibleCards =
-    window.innerWidth >= 1024 ? 4 : window.innerWidth >= 768 ? 3 : 1;
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex + visibleCards >= displayData.length
-          ? 0
-          : prevIndex + visibleCards
-      );
-    }, 3000); // Change slide every 3 seconds
-
-    return () => clearInterval(interval);
-  }, [displayData, visibleCards]);
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0
-        ? displayData.length - visibleCards
-        : prevIndex - visibleCards
-    );
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex + visibleCards >= displayData.length
-        ? 0
-        : prevIndex + visibleCards
-    );
-  };
 
   return (
     <>
@@ -102,22 +68,15 @@ const Ratelist = () => {
           <button onClick={showVehicle}>Vehicle</button>
         </div>
 
-        <div className="slider">
-          <button className="slider-btn left-btn" onClick={handlePrev}>
-            &#9664;
-          </button>
-          <div className="boxcontainer" ref={boxContainerRef}>
-            {displayData.slice(currentIndex, currentIndex + visibleCards).map((val) => (
-              <div className="box" key={val.id}>
-                <img src={val.img} alt={val.name} />
-                <h4>{val.name}</h4>
-                <h5>Rs {val.rate}</h5>
-              </div>
-            ))}
-          </div>
-          <button className="slider-btn right-btn" onClick={handleNext}>
-            &#9654;
-          </button>
+        <div className="boxcontainer">
+          {displayData.map((val) => (
+            <div className="box" key={val.id}>
+              <img src={val.img} alt={val.name} />
+              <h4>{val.name}</h4>
+              <h5>Rs {val.rate}</h5>
+              <button>Add to Scrap</button>
+            </div>
+          ))}
         </div>
       </div>
 

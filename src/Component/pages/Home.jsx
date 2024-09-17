@@ -11,26 +11,30 @@ import Footer from '../Home/footer'
 import '../Home/Section1.css'
 import Slider from '../Home/Slider'
 import Section6 from '../Home/Section6'
+import Testimonial from '../About/Testimonial'
+import Trustedpartner from '../Home/Trustedpartner'
+import Header from '../Home/Header'
 
 const Home = () => {
   return (
     <>
-      <Navbar userdisplay="none"/>
-      <Slider/>
-
-      <main style={{minHeight:'100vh',width:'100%', backgroundColor: 'white'}}>
+      <Navbar userdisplay="none" />
+      {/* <Slider /> */}
+      <Header/>
+      <main style={{ minHeight: '100vh', width: '100%', backgroundColor: 'white' }}>
         {/* <Section1/> */}
-        <Section2/>
-        <Section6/>
-        <Sect1/>
-        <Sec3/>
+        {/* <Section2/> */}
+        <Section6 />
+        {/* <Sect1/> */}
+        {/* <Sec3/> */}
         {/* <Section3/> */}
-        <Section4/>
-        <Section5/>
+        <Section4 />
 
       </main>
-
-      <Footer/>
+      <Testimonial />
+      <Section5 />
+      <Trustedpartner />
+      <Footer />
     </>
   )
 }

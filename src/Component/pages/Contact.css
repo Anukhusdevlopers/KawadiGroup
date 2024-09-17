@@ -1,17 +1,22 @@
+.contactpage{
+    background: #fcfcfc;
+}
 .detailsblock {
     min-height: 42vh;
     width: 100%;
-    margin-top: 10vh;
     display: flex;
     gap: 20px;
-    justify-content: space-between;
-    padding: 2vh
+    margin-top: 10vh;
+    justify-content: center;
+    padding: 2vh;
+    font-family: sans-serif;
+   
 }
 .card{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease-in-out;
     height: 100%;
-    width: 100%;
+    width: 25vw;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -19,15 +24,18 @@
     padding: 20px ;
     gap: 10px;
     border-radius: 8px;
+    background-color: white;
 }
 .card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
   }
   .card h1{
 font-size: 1.8rem;
+color: #087373;
   }
   .card h4{
 font-size: 1.4rem;
+color: #333;
   }
   .card p{
 font-size: 1rem;
@@ -43,12 +51,10 @@ font-size: 1rem;
 }
 
 .formcontainer {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* min-height: 60vh; */
+   /* min-height: 60vh; */
     height: auto;
-    width: 100%;
-    background-color: rgb(230, 228, 228);
-    margin: 15vh 0;
+    width: 80%;
+    margin: 15vh;
     border-radius: 8px;
     padding: 20px 40px;
     display: flex;

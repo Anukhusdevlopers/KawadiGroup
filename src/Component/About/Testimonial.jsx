@@ -1,63 +1,94 @@
-import React, { useRef, useState } from 'react';
+
+import React, { useRef, useState  , useEffect} from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faQuoteLeft   } from '@awesome.me/kit-KIT_CODE/icons/classic/solid'
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/effect-coverflow';
+import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-import './Testimonial.css'
+import './Testimonial.css';
 
 // import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { FreeMode, Pagination,Navigation ,Autoplay } from 'swiper/modules';
 
 export default function Testimonial() {
+
+    const [slidesPerView, setSlidesPerView] = useState(1);
+
+    useEffect(() => {
+      const updateSlidesPerView = () => {
+        const width = window.innerWidth;
+  
+        if (width > 1200) {
+          setSlidesPerView(2);
+        } else if (width > 1050) {
+          setSlidesPerView(1);
+        } else if (width > 650) {
+          setSlidesPerView(1);  
+        } else {
+          setSlidesPerView(1);
+        }
+      };
+  
+      // Call the function initially to set the slidesPerView based on the initial window width
+      updateSlidesPerView();
+  
+      // Add event listener for window resize
+      window.addEventListener("resize", updateSlidesPerView);
+  
+      return () => {
+        window.removeEventListener("resize", updateSlidesPerView);
+      };
+    }, []);
+
     const box = [
-        { img:'https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D', text: ' Amet consectetur Sequi assumenda libero eos tempora corrupti, neque a deserunt minus provident cupiditate!', h1: 'Name Goes ' },
-        { img:'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x10000:format=jpg/path/s277021aa972bd28e/image/ia47b79a0b451f0f2/version/1682877542/portrait-en-lumi%C3%A8re-naturelle.jpg', text: ' Amet consectetur Sequi assumenda libero eos tempora corrupti, neque a deserunt minus provident cupiditate!', h1: 'Goes Here' },
-        { img:'https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/03/1-24.jpg', text: ' Amet consectetur Sequi assumenda libero eos tempora corrupti, neque a deserunt minus provident cupiditate!', h1: 'Name Here' },
-        { img:'https://i.pinimg.com/originals/a3/2c/b8/a32cb8bdbda64ad582ffb5cebc4e4e4f.jpg', text: ' Amet consectetur Sequi assumenda libero eos tempora corrupti, neque a deserunt minus provident cupiditate!', h1: 'Name Here' },
-        { img:'https://i.pinimg.com/736x/9d/69/ca/9d69ca07b2c212bbaed7231105514cf8.jpg', text: ' Amet consectetur Sequi assumenda libero eos tempora corrupti, neque a deserunt minus provident cupiditate!', h1: 'Name Here' },
+        { img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D', text: ' Amet consectetur Sequi assumenda libero eos tempora corrupti, neque a deserunt minus provident cupiditate!  neque a deserunt minus provident cupiditate!', h1: 'Khushboo ' },
+        { img: 'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x10000:format=jpg/path/s277021aa972bd28e/image/ia47b79a0b451f0f2/version/1682877542/portrait-en-lumi%C3%A8re-naturelle.jpg', text: ' Amet consectetur Sequi assumenda libero eos tempora corrupti, neque a deserunt minus provident cupiditate!  neque a deserunt minus provident cupiditate!', h1: 'Khushboo' },
+        { img: 'https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/03/1-24.jpg', text: ' Amet consectetur Sequi assumenda libero eos tempora corrupti, neque a deserunt minus provident cupiditate! neque a deserunt minus provident cupiditate!', h1: 'Khushboo' },
+        { img: 'https://i.pinimg.com/originals/a3/2c/b8/a32cb8bdbda64ad582ffb5cebc4e4e4f.jpg', text: ' Amet consectetur Sequi assumenda libero eos tempora corrupti, neque a deserunt minus provident cupiditate! neque a deserunt minus provident cupiditate!', h1: 'Khushboo' },
+        { img: 'https://i.pinimg.com/736x/9d/69/ca/9d69ca07b2c212bbaed7231105514cf8.jpg', text: ' Amet consectetur Sequi assumenda libero eos tempora corrupti, neque a deserunt minus provident cupiditate! neque a deserunt minus provident cupiditate!', h1: 'Khushboo' },
     ]
+
     return (
-        <div className='testimonial'>
-            <h1 className='h1heading'>Our Team</h1>
+        
+        <div className='Testimonial'>
+            <h1 className='testimonialheading'>Testimonial</h1>
             <Swiper
-                effect={'coverflow'}
-                grabCursor={true}
-                centeredSlides={true}
-                slidesPerView={'auto'}
-                coverflowEffect={{
-                    rotate: 50,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 1,
-                    slideShadows: true,
+              centeredSlides={true}
+              autoplay={{
+                  delay: 2000,
+                  disableOnInteraction: false,
+              }}
+                slidesPerView={slidesPerView}
+               
+                spaceBetween={20}
+                freeMode={true}
+                pagination={{
+                    clickable: true,
                 }}
-                pagination={true}
-                modules={[EffectCoverflow, Pagination]}
+                modules={[FreeMode, Pagination,Autoplay]}
                 className="mySwiper"
             >
-             
+
                 {
                     box.map((val) => {
                         return (
                             <SwiperSlide>
-                                  <div className="colorborder" style={{ borderTopLeftRadius: '10vh', borderBottomRightRadius: '10vh',  backgroundColor: 'white', display: 'flex ', justifyContent: 'center', alignItems: 'center' }}>
-                                <div className="colorborder" style={{ borderTopLeftRadius: '10vh', borderBottomRightRadius: '10vh',  backgroundColor: '#087373', display: 'flex ', justifyContent: 'center', alignItems: 'center' }}>
-                                    <div className="whiteborder" style={{ borderTopLeftRadius: '10vh', borderBottomRightRadius: '10vh', backgroundColor: "white", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-
-                                        <div className="innercolorpart" style={{ borderTopLeftRadius: '10vh', borderBottomRightRadius: '10vh', backgroundColor: '#087373', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-                                            <div className="cir" style={{ height: '10vh', width: '10vh', backgroundColor: "white",  position: 'relative', top: '-30%', display: "flex", justifyContent: 'center', alignItems: 'center' }}>
-                                                <img style={{ height: '10vh',border:'5px solid white', width: '10vh' ,borderRadius:'5%'}} src={val.img} alt="" />
-                                            </div>
-                                            <p style={{ textAlign: 'center', color: 'white', margin: '2vh', fontFamily: 'sans-serif' }}>{val.text} </p>
-                                            <h1 style={{ fontSize: '2rem', fontFamily: 'sans-serif', color: 'white' ,textAlign:'center'}}>{val.h1} </h1>
-                                        </div>
-                                    </div>
+                                <div className="testimonialcard">
+                                  <div className='profilecontainer' style={{}}>
+                                    {/* <FontAwesomeIcon icon={faQuoteLeft} /> */}
+                                    <img src="https://cdn-icons-png.flaticon.com/512/4992/4992676.png" alt="" style={{height:'8vh',width:'8vh',rotate:'180deg'}}/>
+                                    <img className='profileimg' style={{ border: '5px solid white',  borderRadius: '50%' }} src={val.img} alt="" />
+                                    <img src="https://cdn-icons-png.flaticon.com/512/4992/4992676.png" alt="" style={{height:'8vh',width:'8vh'}}/>
+                                  </div>
+                                    <p style={{ textAlign: 'center', color: '#fff', margin: '0 2vh 2vh', fontFamily: 'sans-serif' }}>{val.text} </p>
+                                    <h1 style={{ fontSize: '2rem', fontFamily: 'sans-serif', color: '#fff', textAlign: 'center' }}>{val.h1} </h1>
                                 </div>
-                            </div>
                             </SwiperSlide>
                         )
                     })

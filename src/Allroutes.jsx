@@ -7,6 +7,7 @@ import Contact from "./Component/pages/Contact";
 import Retailer from "./Component/pages/Retailer";
 import Ratelist from "./Component/pages/Ratelist";
 import About from "./Component/pages/About"
+import Feedback from "./Component/pages/Feedback";
 // import Navbar from "./Component/Home/Navbar";
 
 function Allroutes (){
@@ -16,6 +17,7 @@ function Allroutes (){
         <Router>
             <Routes>
                 <Route path="/" element={<Home/>} />
+                <Route path="/feedback" element={<Feedback/>} />
                 <Route path="/about" element={<About/>} />
                 <Route path="/Register" element={<Signup/>} />
                 <Route path="/wholesellerlogin" element={<Login name="Whole Seller" routelink="/wholesellerlogin"/>} />

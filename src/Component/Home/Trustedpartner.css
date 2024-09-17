@@ -1,0 +1,30 @@
+.trusted-partner{
+    margin-bottom: 10vh;
+}
+.trusted-partner h1{
+    font-size: 3rem ;
+    font-family: sans-serif ;
+    text-align: center ;
+    margin: 5vh 0 10vh 0 ;
+    color: #087373 
+}
+.trusted-partner marquee img{
+    height: 13vh;
+    width: 25vh;
+    margin-right: 10vh;
+}
+
+@media(max-width:1000px){
+    .trusted-partner{
+        margin-bottom: 5vh;
+    }
+}
+@media(min-height:1300px){
+    .trusted-partner h1{
+        margin: 0vh 0vh 5vh 0;
+    }
+
+    .trusted-partner{
+        margin-bottom: 4vh;
+    }
+}

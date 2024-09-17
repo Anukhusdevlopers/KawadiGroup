@@ -1,11 +1,11 @@
 import React from 'react'
 import './Sec1About.css'
 
-const Sec1About = () => {
+const Sec1About = (val) => {
   return (
     <>
         <div className="aboutHeading">
-          <h1>About Us</h1>
+          <h1>{val.h1} </h1>
         </div>
     </>
   )

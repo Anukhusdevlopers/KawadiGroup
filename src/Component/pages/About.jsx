@@ -11,10 +11,9 @@ const About = () => {
     return (
         <>
             <Navbar userdisplay="none"/>
-            <Sec1About />
+            <Sec1About h1="About "/>
             <main>
                 <MissionCards/>
-                <Testimonial/>
             </main>
             <Footer />
         </>
