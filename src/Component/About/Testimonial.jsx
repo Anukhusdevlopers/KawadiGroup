@@ -24,10 +24,10 @@ export default function Testimonial() {
       const updateSlidesPerView = () => {
         const width = window.innerWidth;
   
-        if (width > 1200) {
+        if (width > 1500) {
+          setSlidesPerView(3);
+        } else if (width > 1250) {
           setSlidesPerView(2);
-        } else if (width > 1050) {
-          setSlidesPerView(1);
         } else if (width > 650) {
           setSlidesPerView(1);  
         } else {

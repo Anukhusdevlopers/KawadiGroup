@@ -70,7 +70,7 @@ const Section5 = () => {
 
       {/* Customer Satisfaction */}
       <div className="pt" ref={satisfactionRef}>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0aSaRanCOKrJCohZUXs9q330cHNmve7wafQ&s" alt="" />
+        <img src="https://static.vecteezy.com/system/resources/previews/013/695/803/non_2x/customer-satisfaction-icon-style-free-vector.jpg" alt="" />
         <p style={{ fontSize: '1.2rem', marginTop: '1vh' }}>
           Customer Satisfaction
         </p>
@@ -86,7 +86,7 @@ const Section5 = () => {
 
       {/* Total Scrap Recycled */}
       <div className="pt" ref={scrapRef}>
-        <img src="https://cdn-icons-png.flaticon.com/512/4143/4143218.png" alt="" />
+        <img src="https://www.recycling.com/wp-content/uploads/recycling%20symbols/black/Black%20Recycling%20Symbol%20%28U%2B267B%29.jpg" alt="" />
         <p style={{ fontSize: '1.2rem', marginTop: '1vh' }}>
           Total Scrap Recycled
         </p>
@@ -102,7 +102,7 @@ const Section5 = () => {
 
       {/* Years of Business */}
       <div className="pt" ref={businessRef}>
-        <img src="https://pnghq.com/wp-content/uploads/sales-icon-png-free-png-images-14512.png" alt="" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvCGNCbxMIybeoAJbycUIZpaNUI7pZH5NqxKyoS3ubX0tYHWILlnhdKVk7kalrkwNXEtQ&usqp=CAU" alt="" />
         <p style={{ marginTop: '1vh' }}>Years of Business</p>
         <h1>
           {businessInView ? (

@@ -14,6 +14,8 @@ import Section6 from '../Home/Section6'
 import Testimonial from '../About/Testimonial'
 import Trustedpartner from '../Home/Trustedpartner'
 import Header from '../Home/Header'
+import Whychooseus from '../Home/Whychooseus'
+import Howitworks from '../Home/Howitworks'
 
 const Home = () => {
   return (
@@ -21,6 +23,7 @@ const Home = () => {
       <Navbar userdisplay="none" />
       {/* <Slider /> */}
       <Header/>
+      <Howitworks/>
       <main style={{ minHeight: '100vh', width: '100%', backgroundColor: 'white' }}>
         {/* <Section1/> */}
         {/* <Section2/> */}
@@ -31,6 +34,7 @@ const Home = () => {
         <Section4 />
 
       </main>
+      {/* <Whychooseus/> */}
       <Testimonial />
       <Section5 />
       <Trustedpartner />
