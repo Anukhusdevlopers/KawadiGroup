@@ -7,7 +7,7 @@ import Footer from "../Home/footer";
 function Signup() {
     return (
         <>
-        <Navbar/>
+        
             <div className="signupbg" >
                 <div className="container">
                     <div className="txtpart" style={{ height: '100%', width: '50%', display: "flex", color: 'white', flexDirection: 'column ', justifyContent: 'center', padding: '5vh' }}>
@@ -40,7 +40,7 @@ function Signup() {
                     </div>
                 </div>
             </div>
-<Footer/>
+
         </>
     )
 }

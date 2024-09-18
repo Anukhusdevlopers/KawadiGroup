@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './Section5.css';
+import './NumCountup.css';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 
-const Section5 = () => {
+const NumCountup = () => {
   // Separate state for each count to control the start of each animation
   const [startCount, setStartCount] = useState({
     happyCustomers: false,
@@ -117,4 +117,4 @@ const Section5 = () => {
   );
 };
 
-export default Section5;
+export default NumCountup;

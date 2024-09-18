@@ -1,17 +1,14 @@
 import React from 'react'
 import Navbar from '../Home/Navbar'
 import Footer from '../Home/footer'
-import Sec1About from '../About/Sec1About'
-import TextAbout from '../About/TextAbout'
 import MissionCards from '../About/MissionCards'
-import Ourteam from '../About/Ourteam'
-import Testimonial from '../About/Testimonial'
+import AboutHeading from '../About/AboutHeading'
 
 const About = () => {
     return (
         <>
             <Navbar userdisplay="none"/>
-            <Sec1About h1="About "/>
+            <AboutHeading h1="About "/>
             <main>
                 <MissionCards/>
             </main>

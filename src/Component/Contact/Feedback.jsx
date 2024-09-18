@@ -1,6 +1,4 @@
 import React from 'react'
-import Navbar from '../Home/Navbar'
-import Sec1About from '../About/Sec1About'
 import ReactStars from "react-rating-stars-component";
 import Footer from '../Home/footer';
 import './Feedback.css'

@@ -8,7 +8,7 @@ const Howitworks = () => {
   }, []);
 
   const outerDivStyle = {
-    width: '30%',
+    width: '30vw',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -22,7 +22,14 @@ const Howitworks = () => {
     overflow: 'hidden',
     transition: 'transform 0.3s ease', // Smooth transition for hover effect
   };
-
+  const h1heading = {
+    color: '#087373',
+    fontFamily: 'sans-serif',
+    fontSize:' 3rem',
+    fontWeight: '600',
+    textAlign:'center',
+    margin:'5vh'
+  }
   const innerDivStyle = {
     backgroundColor: '#f9f9f9',
     borderRadius: '8px',
@@ -57,12 +64,18 @@ const Howitworks = () => {
     left: '0',
     width: '100%',
     height: '120px',
-    backgroundColor: 'rgba(0, 100, 0, 0.6)',
+    backgroundColor: '#087373',
     transition: 'opacity 0.3s ease, transform 0.3s ease',
     opacity: '0',
+    color: 'white',
     transform: 'translateY(10px)',
     zIndex: 0,
   };
+
+  const hoverEffectBeforeAfterh1 = {
+      content:'""',
+      color:'white'
+  }
 
   const hoverEffectContainer = {
     position: 'relative',
@@ -117,55 +130,58 @@ const Howitworks = () => {
   };
 
   return (
-    <section style={sectionStyle}>
-      {/* Outer Div 1 */}
-      <div style={outerDivStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <div style={innerDivStyle} data-aos="fade-up">
-          <img
-            src="https://kabadikart.com/assets/front/img/intro/05.jpg"
-            alt="Image 1A"
-            style={imageStyle}
-          />
+    <>
+      <h1 style={h1heading}>How it Works</h1>
+      <section style={sectionStyle}>
+        {/* Outer Div 1 */}
+        <div style={outerDivStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <div style={innerDivStyle} >
+            <img
+              src="https://kabadikart.com/assets/front/img/intro/05.jpg"
+              alt="Image 1A"
+              style={imageStyle}
+            />
+          </div>
+          <div style={Object.assign({}, innerDivStyle, hoverEffectContainer)}>
+            <div className="hover-before" style={hoverEffectBeforeAfter}></div>
+            <h1 >Schedule Pickup Scrap</h1>
+            <p>On website or Howitworks, fill a simple four-step form to schedule pickup date and time.</p>
+          </div>
         </div>
-        <div style={Object.assign({}, innerDivStyle, hoverEffectContainer)}>
-          <div className="hover-before" style={hoverEffectBeforeAfter}></div>
-          <h1>Schedule Pickup Scrap</h1>
-          <p>On website or Howitworks, fill a simple four-step form to schedule pickup date and time.</p>
-        </div>
-      </div>
 
-      {/* Outer Div 2 */}
-      <div style={outerDivStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <div style={innerDivStyle} data-aos="fade-up">
-          <img
-            src="https://kabadikart.com/assets/front/img/intro/06.jpg"
-            alt="Image 2A"
-            style={imageStyle}
-          />
+        {/* Outer Div 2 */}
+        <div style={outerDivStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <div style={innerDivStyle} >
+            <img
+              src="https://kabadikart.com/assets/front/img/intro/06.jpg"
+              alt="Image 2A"
+              style={imageStyle}
+            />
+          </div>
+          <div style={Object.assign({}, innerDivStyle, hoverEffectContainer)}>
+            <div className="hover-before" style={hoverEffectBeforeAfter}></div>
+            <h1>Pickup Guy at Doorstep</h1>
+            <p>Our Pickup Guy will reach your doorstep on the scheduled date & time.</p>
+          </div>
         </div>
-        <div style={Object.assign({}, innerDivStyle, hoverEffectContainer)}>
-          <div className="hover-before" style={hoverEffectBeforeAfter}></div>
-          <h1>Pickup Guy at Doorstep</h1>
-          <p>Our Pickup Guy will reach your doorstep on the scheduled date & time.</p>
-        </div>
-      </div>
 
-      {/* Outer Div 3 */}
-      <div style={outerDivStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <div style={innerDivStyle} data-aos="fade-up">
-          <img
-            src="https://kabadikart.com/assets/front/img/intro/07.jpg"
-            alt="Image 3A"
-            style={imageStyle}
-          />
+        {/* Outer Div 3 */}
+        <div style={outerDivStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <div style={innerDivStyle} >
+            <img
+              src="https://kabadikart.com/assets/front/img/intro/07.jpg"
+              alt="Image 3A"
+              style={imageStyle}
+            />
+          </div>
+          <div style={Object.assign({}, innerDivStyle, hoverEffectContainer)}>
+            <div className="hover-before" style={hoverEffectBeforeAfter}></div>
+            <h1>Get Paid for Scrap</h1>
+            <p>Get paid according to the weight and pricing.</p>
+          </div>
         </div>
-        <div style={Object.assign({}, innerDivStyle, hoverEffectContainer)}>
-          <div className="hover-before" style={hoverEffectBeforeAfter}></div>
-          <h1>Get Paid for Scrap</h1>
-          <p>Get paid according to the weight and pricing.</p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

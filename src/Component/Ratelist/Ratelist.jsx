@@ -55,7 +55,7 @@ const Ratelist = () => {
 
   return (
     <>
-      <Navbar userdisplay="none" />
+      
 
       <div className="ratelist">
         <h1>Scrap Rates</h1>
@@ -80,7 +80,7 @@ const Ratelist = () => {
         </div>
       </div>
 
-      <Footer />
+      
     </>
   );
 };

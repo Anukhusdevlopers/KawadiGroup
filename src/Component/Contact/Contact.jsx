@@ -10,7 +10,7 @@ import './Contact.css';
 const Contact = () => {
   return (
     <div className='contactpage'>
-      <Navbar userdisplay="none" />
+     
       <div className='detailsblock'>
           <div className='card'>
             <img src={location} alt="" style={{ width: "40px", height: "40px" }} />
@@ -111,8 +111,8 @@ const Contact = () => {
             <button>Send</button>
           </div>
         </div>
-      <Feedback/>
-      <Footer />
+  
+      
     </div>
   );
 };

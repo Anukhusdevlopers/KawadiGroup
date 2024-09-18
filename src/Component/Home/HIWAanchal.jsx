@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import calender from '../../assets/calender.png';
 import sect6 from '../../assets/sect6.jpg';
 import righticon from '../../assets/righticon.png';
-import './Section6.css';
+import './HIWAanchal.css';
 
-function Section6() {
+function HiwAanchal() {
   const sectionRefs = useRef([]);
 
   useEffect(() => {
@@ -69,4 +69,4 @@ function Section6() {
   );
 }
 
-export default Section6;
+export default HiwAanchal;

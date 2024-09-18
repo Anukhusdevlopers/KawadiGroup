@@ -1,7 +1,7 @@
 import React from 'react'
-import './Sec1About.css'
+import './AboutHeading.css'
 
-const Sec1About = (val) => {
+const AboutHeading = (val) => {
   return (
     <>
         <div className="aboutHeading">
@@ -11,4 +11,4 @@ const Sec1About = (val) => {
   )
 }
 
-export default  Sec1About
+export default  AboutHeading

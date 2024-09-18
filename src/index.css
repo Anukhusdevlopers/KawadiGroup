@@ -11,3 +11,11 @@ body {
   overflow-x: hidden;
   font-family: jost-Thinitalic;
 }
+
+
+main{
+  background-image: url('../../assets/kabad2.png');
+  background-size: 100% 85vh;
+  background-repeat: no-repeat;
+  padding: 5vh 26vh 0;
+} 
