@@ -11,10 +11,10 @@ import Howitworks from '../Home/Howitworks'
 import NumCountup from '../Home/NumCountup'
 import Wchoose from '../Home/Wchoose'
 
-const Home = (val) => {
+const Afterlogin = (val) => {
   return (
     <>
-      <Navbar userdisplay="none" tab="Login" onclickroute="/Retailerlogin" loginover="none"/>
+      <Navbar userdisplay="none"  tab="User" onclickroute="/afterlogin" loginover="none"/>
       <Header />
       <Howitworks />
       <Wchoose/>
@@ -26,4 +26,4 @@ const Home = (val) => {
   )
 }
 
-export default Home
+export default Afterlogin

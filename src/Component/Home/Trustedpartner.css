@@ -28,3 +28,9 @@
         margin-bottom: 4vh;
     }
 }
+
+@media(max-width:500px){
+    .trusted-partner h1{
+        font-size: 2.6rem;
+    }
+}

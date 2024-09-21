@@ -92,6 +92,9 @@
       top: -60px;
       gap: 2vh;
     }
+    .testimonialheading{
+      font-size: 2.6rem;
+    }
   }
   @media(max-width:400px){
     .Testimonial{

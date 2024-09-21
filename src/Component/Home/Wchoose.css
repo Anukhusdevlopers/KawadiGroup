@@ -1,0 +1,143 @@
+.section4 {
+    min-height: 52vh;
+    width: 100%;
+    padding: 10vh 0;
+    margin: 5vh 0vh 10vh 0vh;
+    border-radius: 12px;
+    font-family: sans-serif;
+  }
+  
+  .section4 h1 {
+    color: #087373;
+    font-size: 3rem;
+    margin-bottom: 10vh;
+    text-align: center;
+  }
+  
+  .section4_card {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;
+  }
+  
+  .sect4 {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle {
+    width: 14vw; /* Responsive width */
+    height: 14vw; /* Responsive height to maintain aspect ratio */
+    border-radius: 50%;
+    background: linear-gradient(to top, #087373 50%, rgb(197, 196, 196) 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5), /* Outer shadow */
+                inset 4px 4px 10px rgba(0, 0, 0, 0.5); /* Inner shadow */
+  }
+  
+  .circle::before {
+    content: "";
+    width: 9vw; /* Adjusted to maintain proportional size */
+    height: 9vw;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.5); /* Inner shadow on the inner circle */
+  }
+  
+  .circle img {
+    width: 6vw; /* Adjusted for responsive image size */
+    height: 6vw;
+    object-fit: contain;
+    z-index: 2;
+  }
+  
+  .sect4 h3 {
+    margin-top: 20px;
+    font-size: 22px;
+    color: rgb(43, 42, 42);
+  }
+  
+  .sect4 p {
+    font-size: 17px;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 700px) {
+    .section4 h1 {
+      font-size: 7vh;
+    }
+  
+    .section4 .section4_card {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .circle {
+      width: 40vw; /* Responsive for smaller screens */
+      height: 40vw;
+    }
+  
+    .circle::before {
+      width: 30vw;
+      height: 30vw;
+    }
+  
+    .circle img {
+      width: 20vw;
+      height: 20vw;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .section4 h1 {
+      font-size: 2.6rem;
+    }
+  
+    .section4 .section4_card {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .circle {
+      width: 50vw; /* Further responsive adjustments */
+      height: 50vw;
+    }
+  
+    .circle::before {
+      width: 40vw;
+      height: 40vw;
+    }
+  
+    .circle img {
+      width: 25vw;
+      height: 30vw;
+    }
+  }
+  
+  @media (max-width: 420px) {
+    .circle {
+      width: 55vw; /* For very small screens */
+      height: 55vw;
+    }
+  
+    .circle::before {
+      width: 40vw;
+      height: 40vw;
+    }
+  
+    .circle img {
+      width: 25vw;
+      height: 50vw;
+    }
+  }
+  

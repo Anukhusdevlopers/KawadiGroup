@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import calender from '../../assets/calender.png';
 import sect6 from '../../assets/sect6.jpg';
 import righticon from '../../assets/righticon.png';
-import './HIWAanchal.css';
+// import './HIWAanchal.css';
 
 function HiwAanchal() {
   const sectionRefs = useRef([]);

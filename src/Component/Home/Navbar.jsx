@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import { Link, NavLink } from 'react-router-dom'
 import 'remixicon/fonts/remixicon.css'
-import logo from '../../assets/logo.jpg'
+import logo from '../../assets/LOGO DP.png'
 
 const Navbar = (val) => {
 
@@ -43,24 +43,25 @@ const Navbar = (val) => {
     return (
         <>
             <nav>
-                <div className="logo">
+                <div className="MY_logo">
                     <img src={logo} alt="" />
                 </div>
 
                 <div className='elem'>
                     <NavLink id='elemlink' to="/">Home</NavLink>
                     <NavLink id='elemlink' to="/about">About</NavLink>
+                    <NavLink id='elemlink' to="/blog">Blog</NavLink>
                     <NavLink id='elemlink' to="/ratelist">Rate List</NavLink>
                     <NavLink id='elemlink' to="/contact">Contact Us</NavLink>
 
-                    <Link style={{display:val.logindisplay}} id='elemlink' onClick={loginoption} to="/">Customer </Link>
-                    <div  style={{ opacity:logindisplay, zIndex: '9' }} className="loginover">
-                        <Link to="/Retailerlogin" >Retailer </Link>
-                        <Link to="/wholesellerlogin" >Whole Seller</Link>
-                    </div>
+                    <Link style={{display:val.logindisplay}} id='elemlink' onClick={loginoption} to={val.onclickroute}>{val.tab} </Link>
+                    {/* <div  style={{ opacity:val.loginover, zIndex: '9' }} className="loginover">
+                        <Link to="/Retailerlogin" >Customer </Link>
+                        <Link to="/wholesellerlogin" >Corporate</Link>
+                    </div> */}
 
                     <NavLink style={{display:val.userdisplay }} id='user' to="/">
-                    <i className="ri-user-2-fill" ></i> 
+                    
                      </NavLink>
                     
                 </div>
@@ -74,17 +75,16 @@ const Navbar = (val) => {
                 <Link to="/" onClick={() => { toggleMenu(); mobilenavbarhide(); }}>Home</Link> <br />
                 
                 <NavLink id='elemlink' to="/about">About</NavLink><br />
+                <NavLink id='elemlink' to="/blog">Blog</NavLink> <br />
                     <NavLink id='elemlink' to="/ratelist">Rate List</NavLink> <br />
                 <Link to="/contact">Contact Us</Link> <br />
-
-                <Link onClick={loginoption} style={{display:val.logindisplay}} to="">Customer <i className="ri-arrow-drop-down-fill"></i></Link>
-                <div style={{padding:'1vh 0vh 0 13vh', zIndex: '9',opacity:logindisplay ,scale:logindisplay,display:val.logindisplay }} className="loginover">
+                
+                <Link style={{display:val.logindisplay}} id='elemlink' onClick={loginoption} to={val.onclickroute}>{val.tab} </Link>
+                {/* <div style={{padding:'1vh 0vh 0 13vh', zIndex: '9',opacity:logindisplay ,scale:logindisplay,display:val.logindisplay }} className="loginover">
                     <Link to="/Retailerlogin" >Retailer </Link> <br />
                     <Link to="/wholesellerlogin" >Whole Seller</Link>
-                </div>
-                <NavLink onClick={profileoption} style={{display:val.userdisplay }} id='user' to="">
-                  Profile &nbsp;  <i className="ri-user-2-fill" ></i> 
-                </NavLink>
+                </div> */}
+          
                 {/* <div style={{padding:'1vh 0vh 0 13vh', zIndex: '9',opacity:logindisplay ,scale:logindisplay,}} className="loginover">
                      <Link to="/" >Log Out</Link>
                 </div> */}

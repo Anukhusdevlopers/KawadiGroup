@@ -3,18 +3,18 @@ nav{
   top: 0; 
   /* min-height:13vh; */
   width: 100%;
-  height: 70px;
-  background-color: #087373;
+  height: 90px;
+  background-color: #fff;
   padding:0 0 0 22vh ;
   display: flex;
-  color: white;
+  color: #087373;
   align-items: center;
   justify-content:space-between;
   z-index: 1000;
 }
-.logo img{
-  height: 6vh;
-  width: 15vw;
+.MY_logo img{
+  height: 90px;
+  width: 12vw;
 }
 .elem{
   min-height: 10vh;
@@ -29,7 +29,7 @@ nav{
 .elem #elemlink , #user{
   font-size: 1rem;
   font-weight: 600;
-  color: white;
+  color: #087373;
   text-decoration: none;
   text-transform: uppercase;
   display: flex ;
@@ -59,7 +59,7 @@ nav{
 .hamburger div {
   width: 35px;
   height: 3px;
-  background-color: #ffffff;
+  background-color: #087373;
   margin: 4px 0;
   transition: all 0.3s ease;
 }
@@ -99,7 +99,7 @@ nav{
   min-height: 20vh;
   width: 100%;
   position: absolute;
-  background-color:#087373;
+  background-color:#fff;
   padding:2vh 5vh 5vh 5vh;
   flex-direction: column;
   display: flex;
@@ -110,7 +110,7 @@ nav{
 .mobilenav a{
   font-size: 1rem;
   font-weight: 600;
-  color: rgb(255, 255, 255);
+  color: #087373;
   text-decoration: none;
   text-transform: uppercase;
   margin-bottom: 3vh;
@@ -158,9 +158,12 @@ nav{
     display: initial;
     flex-direction: column;
   }
+  .MY_logo img{
+    width: 150px;
+  }
 }
 @media(max-width:760px){
-  .logo img{
+  .MY_logo img{
     width: 150px;
   }
 }
@@ -171,7 +174,7 @@ nav{
 .elem .loginover{
   top: 13.5vh;
 }
-.logo img{
+.MY_logo img{
   width: 120px;
 }
 }
@@ -180,7 +183,7 @@ nav{
   nav{
     padding-left: 2vh;
   }
-  .logo img{
+  .MY_logo img{
     height: 4vh;
   }
 }

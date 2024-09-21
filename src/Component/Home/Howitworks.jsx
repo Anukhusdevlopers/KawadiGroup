@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import './Howitworks.css'
 
 const Howitworks = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 }); // Initialize AOS and set animation duration to 1000ms
+    AOS.init({ duration: 1000 });
   }, []);
 
   const outerDivStyle = {
@@ -20,20 +21,23 @@ const Howitworks = () => {
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     position: 'relative',
     overflow: 'hidden',
-    transition: 'transform 0.3s ease', // Smooth transition for hover effect
+    gap:'15px',
+    transition: 'transform 0.3s ease',
   };
+
   const h1heading = {
     color: '#087373',
     fontFamily: 'sans-serif',
-    fontSize:' 3rem',
+    fontSize: '3rem',
     fontWeight: '600',
-    textAlign:'center',
-    margin:'5vh'
-  }
+    textAlign: 'center',
+    margin: '5vh'
+  };
+
   const innerDivStyle = {
     backgroundColor: '#f9f9f9',
     borderRadius: '8px',
-    width: "100%",
+    width: '100%',
     textAlign: 'center',
     position: 'relative',
     overflow: 'hidden',
@@ -72,11 +76,6 @@ const Howitworks = () => {
     zIndex: 0,
   };
 
-  const hoverEffectBeforeAfterh1 = {
-      content:'""',
-      color:'white'
-  }
-
   const hoverEffectContainer = {
     position: 'relative',
     display: 'inline-block',
@@ -103,7 +102,7 @@ const Howitworks = () => {
       text.style.textShadow = '2px 2px 4px rgba(0, 0, 0, 0.7)';
     }
 
-    innerDiv.style.transform = 'translateY(-10px)'; // Move the entire card up on hover
+    innerDiv.style.transform = 'translateY(-10px)';
   };
 
   const handleMouseLeave = (e) => {
@@ -126,60 +125,99 @@ const Howitworks = () => {
       text.style.textShadow = 'none';
     }
 
-    innerDiv.style.transform = 'translateY(0)'; // Revert the card position on hover leave
+    innerDiv.style.transform = 'translateY(0)';
   };
 
   return (
     <>
-      <h1 style={h1heading}>How it Works</h1>
-      <section style={sectionStyle}>
+      <style>
+        {`
+        // @media(max-width:1000px){
+        // .outerDivStyle{
+        //   width:500px;
+        // }
+        }
+          // @media (max-width: 768px) {
+          //   h1 {
+          //     font-size: 2rem !important;
+          //   }
+          //   div {
+          //     width: 90vw !important;
+          //   }
+          //   img {
+          //     height: 200px !important;
+          //   }
+          // }
+
+          // @media (max-width: 480px) {
+          //   h1 {
+          //     font-size: 1.5rem !important;
+          //   }
+          //   div {
+          //     width: 100vw !important;
+          //   }
+          //   img {
+          //     height: 150px !important;
+          //   }
+          // }
+        `}
+      </style>
+
+      <h1 className='h1heading'>How it Works</h1>
+      <section className='sectionStyle'>
         {/* Outer Div 1 */}
-        <div style={outerDivStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <div style={innerDivStyle} >
+        <div className='outerDivStyle' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <div className='innerDivStyle' >
             <img
               src="https://kabadikart.com/assets/front/img/intro/05.jpg"
               alt="Image 1A"
-              style={imageStyle}
+              className='imageStyle'
             />
           </div>
-          <div style={Object.assign({}, innerDivStyle, hoverEffectContainer)}>
-            <div className="hover-before" style={hoverEffectBeforeAfter}></div>
+          <div className='textcontainer' >
+            <div className="hover-before" ></div>
             <h1 >Schedule Pickup Scrap</h1>
             <p>On website or Howitworks, fill a simple four-step form to schedule pickup date and time.</p>
           </div>
         </div>
 
+         
+
         {/* Outer Div 2 */}
-        <div style={outerDivStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <div style={innerDivStyle} >
+
+        <div className='outerDivStyle' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <div className='innerDivStyle' >
             <img
               src="https://kabadikart.com/assets/front/img/intro/06.jpg"
               alt="Image 2A"
-              style={imageStyle}
+              className='imageStyle'
             />
           </div>
-          <div style={Object.assign({}, innerDivStyle, hoverEffectContainer)}>
-            <div className="hover-before" style={hoverEffectBeforeAfter}></div>
-            <h1>Pickup Guy at Doorstep</h1>
+          <div className='textcontainer' >
+            <div className="hover-before" ></div>
+            <h1 >Pickup Guy at Doorstep</h1>
             <p>Our Pickup Guy will reach your doorstep on the scheduled date & time.</p>
           </div>
         </div>
+       
 
         {/* Outer Div 3 */}
-        <div style={outerDivStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <div style={innerDivStyle} >
+
+        <div className='outerDivStyle' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <div className='innerDivStyle' >
             <img
               src="https://kabadikart.com/assets/front/img/intro/07.jpg"
               alt="Image 3A"
-              style={imageStyle}
+              className='imageStyle'
             />
           </div>
-          <div style={Object.assign({}, innerDivStyle, hoverEffectContainer)}>
-            <div className="hover-before" style={hoverEffectBeforeAfter}></div>
-            <h1>Get Paid for Scrap</h1>
+          <div className='textcontainer' >
+            <div className="hover-before" ></div>
+            <h1 >Get Paid for Scrap</h1>
             <p>Get paid according to the weight and pricing.</p>
           </div>
         </div>
+       
       </section>
     </>
   );

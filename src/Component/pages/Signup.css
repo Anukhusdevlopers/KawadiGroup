@@ -1,34 +1,46 @@
 .logininput::placeholder {
-    color: rgb(201, 201, 201);
+    color: rgb(114, 114, 114);
     opacity: 1; /* Firefox */
     font-size: 1.5rem;
   }
   
  .logininput ::-ms-input-placeholder { /* Edge 12 -18 */
-    color: rgb(214, 212, 212);
+    color: rgb(124, 123, 123);
   }
 
   .loginbg #loginh1{
     font-size: 4rem;
   }
 
-.signupbg {
+.signupbg,.loginbg {
     height: 100vh;
     width: 100%;
-    background-image: url('../../assets/bg.jpg');
+    background-image: url('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?cs=srgb&dl=pexels-jplenio-1103970.jpg&fm=jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    font-family: sans-serif;
+    padding: 2vh;
 }
-
+.txtpart{
+    width: 50%;
+    padding: 5vh;
+}
 .signupbg .container {
-    height: 80vh;
+    height: 90vh;
     width: 80vw;
     border-radius: 20px;
     display: flex;
-    justify-content: space-between
+    justify-content: center;
+    gap: 10vh;
+}
+.signupbg .container .formpart , .loginform{
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 .signupbg .container .formpart input{
     width: 90%;
@@ -43,11 +55,17 @@
 @media(max-width:1000px){
     .signupbg .container .formpart{
         position: relative;
-        left: -27%;
     }
     .signupbg .container .txtpart{
-        visibility: hidden;
+    visibility: hidden;
+        width: 0%;
+        padding: 0;
     }
+    .signupbg .container{
+        gap: 0;
+        width: 100%;
+    }
+    
 
 }
 @media(max-width:450px){
@@ -56,5 +74,8 @@
     }
     .loginbg #loginh1{
         font-size: 3rem;
+    }
+    .container{
+        width: 100%;
     }
 }
