@@ -98,7 +98,7 @@ nav{
 .mobilenav{
   min-height: 20vh;
   width: 100%;
-  position: absolute;
+  position: fixed;
   background-color:#fff;
   padding:2vh 5vh 5vh 5vh;
   flex-direction: column;

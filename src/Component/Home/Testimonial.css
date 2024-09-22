@@ -1,11 +1,10 @@
 
-
 .Testimonial{
     padding: 10vh 0;
     min-height: 20vh;
     padding: 0vh 5vh ;
     background-color: #fff;
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
 }
 .Testimonial .testimonialheading{

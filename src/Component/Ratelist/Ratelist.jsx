@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../Home/Navbar';
 import Footer from '../Home/footer';
 import './Ratelist.css';
+import { Button } from 'react-bootstrap';
 
 const Ratelist = () => {
   const boxdata = {
@@ -55,7 +56,7 @@ const Ratelist = () => {
 
   return (
     <>
-      
+     
 
       <div className="ratelist">
         <h1>Scrap Rates</h1>
@@ -74,13 +75,15 @@ const Ratelist = () => {
               <img src={val.img} alt={val.name} />
               <h4>{val.name}</h4>
               <h5>Rs {val.rate}</h5>
-              <button>Add to Scrap</button>
+              <button className='add_btn'>Add</button>
+              <button className='pup_btn'>Pickup</button>
+
             </div>
           ))}
         </div>
       </div>
 
-      
+     
     </>
   );
 };
