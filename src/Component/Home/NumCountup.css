@@ -1,6 +1,6 @@
 .section5 {
   min-height: 30vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -25,14 +25,12 @@
 }
 .section5 .pt h1 {
   font-size: 2.5rem;
-  width: 70vw;
   text-align: center;
   /* color: #087373; */
 }
 
 .section5 .pt p {
   font-size: 1.4rem;
-  width: 70vw;
   text-align: center;
 }
 

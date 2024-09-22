@@ -1,13 +1,13 @@
-.h1heading{
+.h1heading {
     color: #087373;
     font-family: sans-serif;
     font-size: 3rem;
     font-weight: 600;
     text-align: center;
-    margin: 15vh 0 10vh
+    margin: 15vh 0 10vh;
 }
 
-.sectionStyle{
+.sectionStyle {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -16,8 +16,10 @@
     width: 100%;
     flex-wrap: wrap;
 }
-.outerDivStyle{
-    width: 27vw;
+
+.outerDivStyle {
+    width: 100%; /* Changed to percentage for flexibility */
+    max-width: 400px; /* Set a max-width to control its size */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,11 +31,12 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
-    gap:15px;
+    gap: 15px;
     transition: transform 0.3s ease;
+    box-sizing: border-box; /* Ensures padding is accounted for */
 }
 
-.innerDivStyle{
+.innerDivStyle {
     background-color: #f9f9f9;
     border-radius: 8px;
     width: 100%;
@@ -41,15 +44,17 @@
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
+    box-sizing: border-box; /* Ensures padding is accounted for */
 }
 
-.imageStyle{
+.imageStyle {
     width: 100%;
     height: 300px;
     border-radius: 8px;
     transition: transform 0.4s ease;
 }
-.sectionStyle .textcontainer{
+
+.sectionStyle .textcontainer {
     background-color: #f9f9f9;
     border-radius: 8px;
     width: 100%;
@@ -58,8 +63,10 @@
     overflow: hidden;
     transition: all 0.3s ease;
     display: inline-block;
+    box-sizing: border-box; /* Ensures padding is accounted for */
 }
-.hover-before::before{
+
+.hover-before::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -69,22 +76,24 @@
     background-color: #087373;
     transition: opacity 0.3s ease, transform 0.3s ease;
     opacity: 0;
-    color: white;
     transform: translateY(10px);
     z-index: 0;
 }
 
-@media(max-width:1150px){
-    .outerDivStyle{
-        width: 350px;
+@media (max-width: 1150px) {
+    .outerDivStyle {
+        width: 40%; /* More responsive width for smaller viewports */
+        max-width: 350px;
     }
 }
 
-@media(max-width:450px){
-    .outerDivStyle{
-        width: 300px;
+@media (max-width: 450px) {
+    .outerDivStyle {
+        width: 90%; /* Makes sure it scales well on mobile */
+        max-width: 300px;
     }
-    .h1heading{
+
+    .h1heading {
         font-size: 2.6rem;
     }
 }

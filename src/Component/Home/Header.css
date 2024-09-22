@@ -12,20 +12,21 @@
     background-color: #fff;
     margin-bottom: 90px;
     height: 95vh;
+    width: 100%;
     position: relative;
     flex-wrap: wrap;
     font-family: sans-serif;
 }
 
 .hero-text {
-    max-width: 60%;
+    max-width: 70%;
     z-index: 2;
     padding-right: 50px;
     margin-top: 5vh;
 }
 
 .hero-text h3 {
-    font-size: 2rem;
+    font-size: 2.1rem;
     color: #505050;
     margin-bottom: 15px;
     font-family: 'Playfair Display', serif;
@@ -33,13 +34,13 @@
 
 .hero-text h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 4rem;    
+    font-size: 4.5rem;    
     color: #087373;
 }
 
 .hero-text p {
     font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 100;
     margin-top: 20px;
     color: #4f4e4e;
@@ -110,7 +111,7 @@
     }
     .hero-text {
         /* margin-top: 9vh; */
-        /* max-width: 60%; */
+        max-width: 80%;
     }
     /* .hero-text h1 {
         font-size: 50px;
@@ -137,18 +138,18 @@
         text-align: center;
     }
     .hero-text h1 {
-        font-size: 60px;
+        font-size: 3.8rem;
     }
     .hero-text h3 {
         font-weight: 800;
-        font-size: 29px;
+        font-size: 2rem;
     }
     .hero-text p {
-        font-size: 18px;
+        font-size: 1.25rem;
         color: #515353;
     }
     .hero-text .btn {
-        font-size: 16px;
+        font-size: 1.2rem;
     }
     .hero-image-container {
         background-color: #e0f5e9; /* Light green background */
@@ -183,15 +184,15 @@
     }
 
     .hero-text h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .hero-text h3 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     .hero-text p {
-        font-size: 0.9rem;
+        font-size: 1.15rem;
     }
 
     .hero-text .btn {
@@ -232,15 +233,15 @@
     }
 
     .hero-text h1 {
-        font-size: 2.6rem;
+        font-size: 3rem;
     }
 
     .hero-text h3 {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
 
     .hero-text p {
-        font-size: 0.8rem;
+        font-size: 1.05rem;
     }
 
     .hero-text .btn {

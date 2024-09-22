@@ -1,5 +1,4 @@
 .contactpage {
-    background: #fcfcfc;
     padding: 2vh;
 }
 
@@ -58,9 +57,8 @@
     align-items: center;
     padding: 2vh
 }
-
+/* 
 .contactpage .formcontainer {
-    /* min-height: 60vh; */
     height: auto;
     width: 100%;
     border-radius: 8px;
@@ -94,6 +92,7 @@
     border-radius: 10px;
     border: none;
 }
+*/
 
 @media(max-width:1150px){
     .contactpage .card{
@@ -163,7 +162,7 @@
 
     .contactpage .formcontainer .form {
         padding: 15px;
-        /* height: 76vh; */
+   
     }
 
     .contactpage .formcontainer .map {
@@ -221,5 +220,200 @@
     }
     .contactpage .detailsblock .card{
         width: 280px;
+    }
+} 
+
+.cntct_us{
+    min-height:auto;
+}
+.cntct_outr{
+   height: 40vh;
+   width: 100%;
+   background-size:cover;
+   background-position: center;
+   background-repeat: no-repeat;
+    background-image: url('https://images.pexels.com/photos/1416530/pexels-photo-1416530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+.cntct_outr_Bigtxt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size:4rem;
+    font-weight: 700;
+    color: white;
+    opacity: 0.8;
+    background-color: rgb(161, 156, 156);
+}
+.ctct_form{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    padding: 2rem;
+}
+.ctct_form_txt{
+
+ padding: 1rem;
+ flex:50%;
+ display: flex;
+ flex-direction: column;
+}
+.ctct_form_bgtxt{
+    font-size: 2rem;
+   
+    font-weight: 600;
+}
+.ctct_form_smtxt{
+   
+    font-size: medium;
+   
+}
+.ctct_form_input{
+    flex:50%;
+   
+    padding: 1rem;
+    
+    
+}
+.ctct_form_input_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.ctct_form_input_txt{
+    font-size: xx-large;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.ctct_form_flds{
+    width: 250px;
+    height: 50px;
+    padding: 3px;
+    font-size: small;
+    outline: none;
+    border-radius: 10px;
+}
+.btn_div_ctct{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.ctct_form_flds_div{
+    position: relative;
+}
+.ctct_form_flds_label{
+    position: absolute;
+    top:-15px;
+    left:15px;
+    padding: 1px;
+    background-color: white;
+}
+.ctct_form_btn{
+    padding: 10px 35px;
+    background-color: rgb(166, 248, 248);
+    border: none;   
+    color:rgb(8, 161, 161) ;
+   border-radius: 5px;
+}
+.ctct_form_btn:hover{
+    background-color: rgb(78, 224, 224); 
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+}
+
+.map_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    
+}
+.ngoLines{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(197, 247, 122);
+    color: green;
+    padding: 1rem;
+}
+.ngoLines_bgtext{
+    font-size: large;
+}
+.ngoLines_mdtext{
+    font-size: 25px;
+}
+@media (max-width:883px){
+    .ctct_form{
+       
+        flex-direction: column;
+       
+    }
+    .cntct_outr_Bigtxt{
+       
+        font-size:2rem;
+        font-weight: 700;
+       
+    }
+}
+@media (max-width:672px){
+   
+    .ngoLines_bgtext{
+        font-size: 15px;
+    }
+    .ngoLines_mdtext{
+        font-size: 20px;
+    }
+}
+@media (max-width:545px){
+   
+    .ngoLines_bgtext{
+        font-size: 14px;
+    }
+    .ngoLines_mdtext{
+        font-size: 18px;
+    }
+    .ngoLines_lst{
+        font-size: x-small;
+    }
+}
+@media (max-width:493px){
+   
+    .ngoLines_bgtext{
+        font-size: 7px;
+    }
+    .ngoLines_mdtext{
+        font-size: 12px;
+    }
+    .ngoLines_lst{
+        font-size: x-small;
+    }
+}
+@media (max-width:442px){
+    .ctct_form_input_txt{
+      font-size: 20px;  
+    }
+    .cntct_outr_Bigtxt{
+       
+        font-size:1rem;
+        font-weight: 700;
+       
+    }
+    .ctct_form_flds{
+        width: 190px;
+        height: 50px;
+       
+    }
+    .ctct_form_flds_label{
+        font-size: smaller;
+        position: absolute;
+        top:-15px;
+        left:15px;
+        padding: 5px;
+        background-color: white;
     }
 }

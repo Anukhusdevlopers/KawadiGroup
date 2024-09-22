@@ -1,86 +1,13 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './Howitworks.css'
+import './Howitworks.css';
 
 const Howitworks = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 2000 });
+    AOS.refresh(); // Refresh AOS animations after rendering
   }, []);
-
-  const outerDivStyle = {
-    width: '30vw',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '15px',
-    margin: '5px',
-    borderRadius: '10px',
-    backgroundColor: '#ffffff',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    position: 'relative',
-    overflow: 'hidden',
-    gap:'15px',
-    transition: 'transform 0.3s ease',
-  };
-
-  const h1heading = {
-    color: '#087373',
-    fontFamily: 'sans-serif',
-    fontSize: '3rem',
-    fontWeight: '600',
-    textAlign: 'center',
-    margin: '5vh'
-  };
-
-  const innerDivStyle = {
-    backgroundColor: '#f9f9f9',
-    borderRadius: '8px',
-    width: '100%',
-    textAlign: 'center',
-    position: 'relative',
-    overflow: 'hidden',
-    transition: 'all 0.3s ease',
-  };
-
-  const sectionStyle = {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    padding: '10px',
-    width: '100%',
-    boxSizing: 'border-box',
-    flexWrap: 'wrap',
-  };
-
-  const imageStyle = {
-    width: '100%',
-    height: '300px',
-    borderRadius: '8px',
-    transition: 'transform 0.4s ease',
-  };
-
-  const hoverEffectBeforeAfter = {
-    content: '""',
-    position: 'absolute',
-    bottom: '0',
-    left: '0',
-    width: '100%',
-    height: '120px',
-    backgroundColor: '#087373',
-    transition: 'opacity 0.3s ease, transform 0.3s ease',
-    opacity: '0',
-    color: 'white',
-    transform: 'translateY(10px)',
-    zIndex: 0,
-  };
-
-  const hoverEffectContainer = {
-    position: 'relative',
-    display: 'inline-block',
-    width: '100%',
-  };
 
   const handleMouseEnter = (e) => {
     const innerDiv = e.currentTarget;
@@ -98,7 +25,7 @@ const Howitworks = () => {
     }
 
     if (text) {
-      text.style.color = '#ffffff';
+      text.style.color = '#fff';
       text.style.textShadow = '2px 2px 4px rgba(0, 0, 0, 0.7)';
     }
 
@@ -130,43 +57,13 @@ const Howitworks = () => {
 
   return (
     <>
-      <style>
-        {`
-        // @media(max-width:1000px){
-        // .outerDivStyle{
-        //   width:500px;
-        // }
-        }
-          // @media (max-width: 768px) {
-          //   h1 {
-          //     font-size: 2rem !important;
-          //   }
-          //   div {
-          //     width: 90vw !important;
-          //   }
-          //   img {
-          //     height: 200px !important;
-          //   }
-          // }
-
-          // @media (max-width: 480px) {
-          //   h1 {
-          //     font-size: 1.5rem !important;
-          //   }
-          //   div {
-          //     width: 100vw !important;
-          //   }
-          //   img {
-          //     height: 150px !important;
-          //   }
-          // }
-        `}
-      </style>
-
       <h1 className='h1heading'>How it Works</h1>
-      <section className='sectionStyle'>
+      <section className='sectionStyle' >
         {/* Outer Div 1 */}
-        <div className='outerDivStyle' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div className='outerDivStyle' 
+          onMouseEnter={handleMouseEnter} 
+          onMouseLeave={handleMouseLeave} 
+          data-aos="zoom-in" >
           <div className='innerDivStyle' >
             <img
               src="https://kabadikart.com/assets/front/img/intro/05.jpg"
@@ -174,50 +71,52 @@ const Howitworks = () => {
               className='imageStyle'
             />
           </div>
-          <div className='textcontainer' >
-            <div className="hover-before" ></div>
-            <h1 >Schedule Pickup Scrap</h1>
-            <p>On website or Howitworks, fill a simple four-step form to schedule pickup date and time.</p>
+          <div className='textcontainer'>
+            <div className="hover-before"></div>
+            <h1 style={{fontSize:'2rem',marginBottom:'2vh'}}>Schedule Pickup Scrap</h1>
+            <p style={{fontSize:'1.2rem'}}>On website or Howitworks, fill a simple four-step form to schedule pickup date and time.</p>
           </div>
         </div>
 
-         
-
         {/* Outer Div 2 */}
-
-        <div className='outerDivStyle' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <div className='innerDivStyle' >
+        <div className='outerDivStyle' 
+          onMouseEnter={handleMouseEnter} 
+          onMouseLeave={handleMouseLeave} 
+          data-aos="zoom-in" 
+          >
+          <div className='innerDivStyle'>
             <img
               src="https://kabadikart.com/assets/front/img/intro/06.jpg"
               alt="Image 2A"
               className='imageStyle'
             />
           </div>
-          <div className='textcontainer' >
-            <div className="hover-before" ></div>
-            <h1 >Pickup Guy at Doorstep</h1>
-            <p>Our Pickup Guy will reach your doorstep on the scheduled date & time.</p>
+          <div className='textcontainer'>
+            <div className="hover-before"></div>
+            <h1 style={{fontSize:'2rem',marginBottom:'2vh'}}>Pickup Guy at Doorstep</h1>
+            <p style={{fontSize:'1.2rem'}}>Our Pickup Guy will reach your doorstep on the scheduled date & time.</p>
           </div>
         </div>
-       
 
         {/* Outer Div 3 */}
-
-        <div className='outerDivStyle' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <div className='innerDivStyle' >
+        <div className='outerDivStyle' 
+          onMouseEnter={handleMouseEnter} 
+          onMouseLeave={handleMouseLeave} 
+          data-aos="zoom-in"  // Add AOS here too 
+          >
+          <div className='innerDivStyle'>
             <img
               src="https://kabadikart.com/assets/front/img/intro/07.jpg"
               alt="Image 3A"
               className='imageStyle'
             />
           </div>
-          <div className='textcontainer' >
-            <div className="hover-before" ></div>
-            <h1 >Get Paid for Scrap</h1>
-            <p>Get paid according to the weight and pricing.</p>
+          <div className='textcontainer'>
+            <div className="hover-before"></div>
+            <h1 style={{fontSize:'2rem',marginBottom:'2vh'}}>Get Paid for Scrap</h1>
+            <p style={{fontSize:'1.2rem'}}>Get paid according to the weight and pricing.</p>
           </div>
         </div>
-       
       </section>
     </>
   );

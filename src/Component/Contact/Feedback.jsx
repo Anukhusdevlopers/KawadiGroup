@@ -42,7 +42,6 @@ const Feedback = () => {
                     </form>
                 </div>
             </div>
-            <Footer />
         </>
     )
 }

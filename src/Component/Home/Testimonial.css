@@ -5,12 +5,14 @@
     min-height: 20vh;
     padding: 0vh 5vh ;
     background-color: #fff;
+    width: 100vw;
+    overflow-x: hidden;
 }
 .Testimonial .testimonialheading{
     font-size: 3rem;
     font-family: sans-serif;
     text-align: center;
-    margin:20vh 0vh 8vh 0vh;
+    margin:10vh 0vh 8vh 0vh;
     color: #087373;
 }
 
@@ -124,4 +126,10 @@
        top: -90px;
     }
     
+  }
+
+  @media(height:600px){
+    .profilecontainer{
+      top: -60px;
+    }
   }

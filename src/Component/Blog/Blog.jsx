@@ -1,8 +1,17 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './Blog.css'
 import img1 from '../../assets/slider4.jpg'
 
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Blog = () => {
+
+    useEffect(() => {
+        AOS.init({ duration: 3000 });
+        AOS.refresh(); // Refresh AOS animations after rendering
+      }, []);
 
     const blogdata = [
         {img:'https://katanamrp.com/wp-content/uploads/2023/03/shutterstock_621375611-scaled.jpg',heading:'Save Forest', text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officia totam dolor, explicabo veniam amet quis quod et molestias dignissimos?',date:'Fri 15 Aug, 2024'},
@@ -22,7 +31,7 @@ const Blog = () => {
                 {
                     blogdata.map((val)=>{
                         return(
-                            <div className="blogcard">
+                            <div className="blogcard" data-aos="zoom-in">
                             <img src={val.img} alt="" />
                             <h2>{val.heading} </h2>
                             <p>{val.text} </p>

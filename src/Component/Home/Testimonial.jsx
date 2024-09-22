@@ -13,10 +13,17 @@ import 'swiper/css/navigation';
 
 import './Testimonial.css';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 // import required modules
 import { FreeMode, Pagination,Navigation ,Autoplay } from 'swiper/modules';
 
 export default function Testimonial() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+    AOS.refresh(); // Refresh AOS animations after rendering
+  }, []);
 
     const [slidesPerView, setSlidesPerView] = useState(1);
 
@@ -47,7 +54,7 @@ export default function Testimonial() {
     }, []);
 
     const box = [
-        { img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D', text: ' Amet consectetur Sequi assumenda libero eos tempora corrupti, neque a deserunt minus provident cupiditate!  neque a deserunt minus provident cupiditate!', h1: 'Khushboo ' },
+         { img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D', text: ' Amet consectetur Sequi assumenda libero eos tempora corrupti, neque a deserunt minus provident cupiditate!  neque a deserunt minus provident cupiditate!', h1: 'Khushboo ' },
         { img: 'https://image.jimcdn.com/app/cms/image/transf/dimension=1920x10000:format=jpg/path/s277021aa972bd28e/image/ia47b79a0b451f0f2/version/1682877542/portrait-en-lumi%C3%A8re-naturelle.jpg', text: ' Amet consectetur Sequi assumenda libero eos tempora corrupti, neque a deserunt minus provident cupiditate!  neque a deserunt minus provident cupiditate!', h1: 'Khushboo' },
         { img: 'https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2018/03/1-24.jpg', text: ' Amet consectetur Sequi assumenda libero eos tempora corrupti, neque a deserunt minus provident cupiditate! neque a deserunt minus provident cupiditate!', h1: 'Khushboo' },
         { img: 'https://i.pinimg.com/originals/a3/2c/b8/a32cb8bdbda64ad582ffb5cebc4e4e4f.jpg', text: ' Amet consectetur Sequi assumenda libero eos tempora corrupti, neque a deserunt minus provident cupiditate! neque a deserunt minus provident cupiditate!', h1: 'Khushboo' },
@@ -79,7 +86,7 @@ export default function Testimonial() {
                     box.map((val) => {
                         return (
                             <SwiperSlide>
-                                <div className="testimonialcard">
+                                <div className="testimonialcard" data-aos="zoom-in">
                                   <div className='profilecontainer' style={{}}>
                                     {/* <FontAwesomeIcon icon={faQuoteLeft} /> */}
                                     <img src="https://cdn-icons-png.flaticon.com/512/4992/4992676.png" alt="" style={{height:'8vh',width:'8vh',rotate:'180deg'}}/>

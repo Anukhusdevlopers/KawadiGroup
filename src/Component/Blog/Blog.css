@@ -8,7 +8,7 @@
     font-size: 3rem;
     font-family: sans-serif;
     text-align: center;
-    margin: 5vh 0 15vh;
+    margin: 5vh 0 8vh;
 }
 .blogcontainer{
     min-height: 50vh;
@@ -62,3 +62,14 @@ margin: 3vh;
     }
 }
 
+@media(min-height:1000px){
+    .blogcard{
+        width: 70vw;
+    }
+    .blogcard h2{
+        font-size: 2.1rem;
+    }
+    .blogcard p{
+        font-size: 1.2rem;
+    }
+}
