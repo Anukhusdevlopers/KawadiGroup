@@ -4,14 +4,18 @@ import Footer from '../Home/footer'
 import MissionCards from '../About/MissionCards'
 import AboutHeading from '../About/AboutHeading'
 
+import Aboutpage from '../About/Aboutpage'
+
 const About = () => {
     return (
         <>
-            <Navbar userdisplay="none"/>
-            <AboutHeading h1="About "/>
+            <Navbar userdisplay="none" />
+            {/* <AboutHeading h1="About "/>
             <main>
                 <MissionCards/>
-            </main>
+            </main> */}
+           <Aboutpage/>
+
             <Footer />
         </>
     )

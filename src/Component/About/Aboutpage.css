@@ -1,0 +1,105 @@
+.about_us{
+    min-height:auto;
+}
+.aboutUs_outr{
+   height: 40vh;
+   width: 100%;
+   background-size:cover;
+   background-position: center;
+   background-repeat: no-repeat;
+    background-image: url('	https://lucknowkabadiwala.online/frontend_assets/images/pagetitle-bg.jpg');
+
+}
+.about_us_vsn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+.about_us_vsn_txt_outr{
+    display: flex;
+    justify-content: center;
+}
+.about_us_vsn_txt{
+    color: #087373;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 5vh;
+    text-align: center;
+}
+.about_us_vsn_grpic{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.about_us_vsn_grpic_rev{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.about_us_vsn_grpic_left{
+  flex: 50%;
+  padding: 1rem;
+}
+.about_us_vsn_grpic_right{
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    padding: 1rem;
+    line-height: 1.4;
+}
+.about_us_vsn_img{
+    width: 40rem;
+    object-fit: cover; /* This will prevent stretching */
+    object-position: center;
+
+}
+@media (max-width:1016px){
+    .about_us_vsn_img{
+        width: 30rem;
+    }  
+}
+
+
+@media (max-width:890px){
+    .about_us_vsn_img{
+        width: 35rem;
+    }  
+    .about_us_vsn_grpic_right{
+        line-height: 1.2;
+        text-align: center;
+    }
+    .about_us_vsn_grpic{
+        display: flex;
+        flex-direction: column;
+        align-items:center ;
+        
+    }
+    .about_us_vsn_grpic_rev{
+        display: flex;
+        flex-direction:column-reverse;
+        align-items:center ; 
+    }
+}
+@media (max-width:650px){
+    .about_us_vsn_img{
+        width: 25rem;
+    }  
+  
+}
+
+@media (max-width:430px){
+    .about_us_vsn_img{
+        width: 18rem;
+        height: 30vh;
+    }   
+}
+
+@media(min-height:1250px){
+    .about_us_vsn_img{
+       
+        height: 30vh;
+    }
+}

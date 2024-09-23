@@ -31,7 +31,7 @@ function Allroutes (){
                 
                 <Route path="/Register" element={<Signup/>} />
                 <Route path="/wholesellerlogin" element={<Login name="Whole Seller" routelink="/wholesellerlogin"/>} />
-                <Route path="/Retailerlogin" element={<Login name="Login" routelink="/retailerpage"/>} />
+                <Route path="/login" element={<Login name="Login" routelink="/retailerpage"/>} />
             </Routes>
         </Router>
         </>

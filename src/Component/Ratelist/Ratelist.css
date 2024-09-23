@@ -89,7 +89,7 @@
   color: #011313;
   margin-bottom: 10px;
 }
-.add_btn{
+/* .add_btn{
   background-color: #017070;
   border-radius: 12px;
   color: white;
@@ -98,7 +98,16 @@
   height: 7vh;
   text-align: center;
   margin-right: 10px;
-}
+} */
+ .add_btn{
+  margin-right: 10px;
+  background-color: #017070;
+  color: #fff;
+  border: 2px solid #017070;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 10px 25px;
+ }
 .pup_btn{
   margin-left: 10px;
   background-color: transparent;

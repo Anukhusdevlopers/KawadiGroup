@@ -30,14 +30,18 @@ const Navbar = (val) => {
         isMenuOpen ? mobilenavbarhide() : mobilenavbar()
     }
 
-    const [logindisplay,setLogindisplay] = useState(0);
+    const [logindisplay,setLogindisplay] = useState('initial');
+    const [userdisplay,setUserdisplay] = useState('none');
 
-    function loginoption(){
-        logindisplay == 0 ? setLogindisplay('1') : setLogindisplay("0");
-    }
-    function profileoption(){
-        logindisplay == 0 ? setLogindisplay('1') : setLogindisplay("0");
-    }
+  
+
+    // function loginoption(){
+    //     logindisplay == 0 ? setLogindisplay('1') : setLogindisplay("0");
+    // }
+    // function profileoption(){
+    //     logindisplay == 0 ? setLogindisplay('1') : setLogindisplay("0");
+    // }
+
 
 
     return (
@@ -54,16 +58,11 @@ const Navbar = (val) => {
                     <NavLink id='elemlink' to="/ratelist">Rate List</NavLink>
                     <NavLink id='elemlink' to="/contact">Contact Us</NavLink>
 
-                    <Link style={{display:val.logindisplay}} id='elemlink' onClick={loginoption} to={val.onclickroute}>{val.tab} </Link>
-                    {/* <div  style={{ opacity:val.loginover, zIndex: '9' }} className="loginover">
-                        <Link to="/Retailerlogin" >Customer </Link>
-                        <Link to="/wholesellerlogin" >Corporate</Link>
-                    </div> */}
+                    <Link style={{}} id='elemlink'  to={val.onclickroute}>{val.tab} </Link>
+                    {/* <Link style={{display:userdisplay}} id='elemlink' to="" >User </Link>
+                   */}
 
-                    <NavLink style={{display:val.userdisplay }} id='user' to="/">
-                    
-                     </NavLink>
-                    
+                 
                 </div>
                 <div className={`hamburger ${isMenuOpen ? 'cross' : ''} `} onClick={navopen} >
                     <div></div>
@@ -71,6 +70,13 @@ const Navbar = (val) => {
                     <div></div>
                 </div>
             </nav>
+
+
+
+            {/* for mobile view */}
+
+
+
             <div className="mobilenav" style={{ visibility: hidden }}>
                 <Link to="/" onClick={() => { toggleMenu(); mobilenavbarhide(); }}>Home</Link> <br />
                 
@@ -79,7 +85,7 @@ const Navbar = (val) => {
                     <NavLink id='elemlink' to="/ratelist">Rate List</NavLink> <br />
                 <Link to="/contact">Contact Us</Link> <br />
                 
-                <Link style={{display:val.logindisplay}} id='elemlink' onClick={loginoption} to={val.onclickroute}>{val.tab} </Link>
+                <Link style={{display:val.logindisplay}} id='elemlink'  to={val.onclickroute}>{val.tab} </Link>
                 {/* <div style={{padding:'1vh 0vh 0 13vh', zIndex: '9',opacity:logindisplay ,scale:logindisplay,display:val.logindisplay }} className="loginover">
                     <Link to="/Retailerlogin" >Retailer </Link> <br />
                     <Link to="/wholesellerlogin" >Whole Seller</Link>
