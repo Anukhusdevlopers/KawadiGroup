@@ -162,13 +162,13 @@
 @media (max-width: 480px) {
   .about_card {
     width: 30vh;
-    height: 49vh;
+    height: 55vh;
   }
 
   .about_card img {
     width: 30vh;
     height: 22vh;
-    margin-top: 27vh;
+    margin-top: 33vh;
   }
 
   /* .about_card h1 {
