@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Navbar from '../Home/Navbar';
 import Footer from '../Home/footer';
 import './Ratelist.css';
-import { Button } from 'react-bootstrap';
 
 const Ratelist = () => {
   const boxdata = {
@@ -57,7 +56,6 @@ const Ratelist = () => {
   return (
     <>
      
-
       <div className="ratelist">
         <h1>Scrap Rates</h1>
         <div className="buttoncontainer">

@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactStars from "react-rating-stars-component";
-import Footer from '../Home/footer';
 import './Feedback.css'
 
 const Feedback = () => {

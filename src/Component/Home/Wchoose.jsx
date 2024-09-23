@@ -5,10 +5,7 @@ import "./Wchoose.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import rupee from "../../assets/indian-rupee.webp";
-import haslefree from "../../assets/haslefree.webp";
-import verifieduser from "../../assets/verified.webp";
-import d2d from "../../assets/dtd.jpg";
+
 
 const Wchoose = () => {
 
