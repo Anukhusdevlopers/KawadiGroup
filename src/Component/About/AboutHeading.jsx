@@ -1,14 +1,21 @@
-import React from 'react'
-import './AboutHeading.css'
+import React from "react";
+import "./AboutHeading.css";
 
-const AboutHeading = (val) => {
+const AboutHeading = () => {
   return (
     <>
-        <div className="aboutHeading">
-          <h1>{val.h1} </h1>
-        </div>
+      <div className="aboutHeading">
+        <h1>About </h1>
+        <p>
+          To be the premier online platform for doorstep kabadiwala scrap
+          pickup, leading the recycling industry with a seamless, eco-friendly
+          solution .online platform for doorstep kabadiwala scrap pickup,
+          leading the recycling industry with a seamless, eco-friendly solution
+          .{" "}
+        </p>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default  AboutHeading
+export default AboutHeading;

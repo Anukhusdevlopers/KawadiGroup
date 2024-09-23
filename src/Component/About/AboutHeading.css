@@ -1,21 +1,44 @@
-.aboutHeading{
-    height: 35vh;
+.aboutHeading {
+    height: 60vh;
     width: 100%;
     display: flex;
-    margin-bottom: 15vh;
+    flex-direction: column;
+    margin-bottom: 4vh;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .aboutHeading::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../assets/about3.jpg');
     background-size: cover;
     background-position: center;
-    background-image: url('	https://lucknowkabadiwala.online/frontend_assets/images/pagetitle-bg.jpg');
-}
-.aboutHeading h1{
-    font-size: 3rem;
+    opacity: 0.9; 
+    z-index: -1; 
+  }
+  
+  .aboutHeading h1 {
+    font-size: 3.5rem;
     color: white;
     font-family: sans-serif;
-}
-@media(max-width:850px){
-    .aboutHeading{
-        margin-bottom: 5vh;
-    }
-}
+    text-align: center;
+    z-index: 1; /* Keep the text on top */
+  }
+  
+  .aboutHeading p {
+    font-size: 1.2rem;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    max-width: 600px; /* Control the width for text wrapping */
+    margin: 0 auto;
+    z-index: 1; /* Keep the text on top */
+  }
+  

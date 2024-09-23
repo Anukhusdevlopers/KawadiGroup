@@ -1,0 +1,164 @@
+.about_detail1 {
+    background-image: url('../../assets/goal1.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    padding-left: 60px;
+    padding-bottom: 60px;
+    margin: 7vh 20vh;
+}
+
+.goaldiv {
+    background-color: #226529d4;
+    text-align: center;
+    width: 80vh;
+    height: 60vh;
+    padding: 8vh;
+}
+
+.goaldiv h1 {
+    font-weight: 600;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.goaldiv p {
+    font-size: 20px;
+}
+
+.about_detail2 {
+    background-image: url('../../assets/profile.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 70vh;
+    padding-right: 60px;
+    padding-bottom: 60px;
+    margin: 7vh 20vh;
+}
+
+.profilediv {
+    float: right;
+    background-color: #226529d4;
+    text-align: center;
+    width: 80vh;
+    height: 60vh;
+    padding: 8vh;
+}
+
+.profilediv h1 {
+    font-weight: 600;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.profilediv p {
+    font-size: 20px;
+}
+
+.about_detail3 {
+    background-image: url('../../assets/whatwedo1.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 70vh;
+    padding-left: 60px;
+    padding-bottom: 60px;
+    margin: 7vh 20vh;
+}
+
+.whatwedo_div {
+    background-color: #226529d4;
+    text-align: center;
+    width: 80vh;
+    height: 60vh;
+    padding: 8vh;
+}
+
+.whatwedo_div h1 {
+    font-weight: 600;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.whatwedo_div p {
+    font-size: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .about_detail1, .about_detail2, .about_detail3 {
+        margin: 5vh 10vh;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .goaldiv, .profilediv, .whatwedo_div {
+        width: 70vh;
+        height: 50vh;
+        padding: 6vh;
+    }
+}
+
+@media (max-width: 992px) {
+    .about_detail1, .about_detail2, .about_detail3 {
+        margin: 5vh 8vh;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .goaldiv, .profilediv, .whatwedo_div {
+        width: 60vh;
+        height: 45vh;
+        padding: 5vh;
+    }
+
+    .goaldiv h1, .profilediv h1, .whatwedo_div h1 {
+        font-size: 40px;
+    }
+
+    .goaldiv p, .profilediv p, .whatwedo_div p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about_detail1, .about_detail2, .about_detail3 {
+        margin: 4vh 5vh;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .goaldiv, .profilediv, .whatwedo_div {
+        width: 90%;
+        height: auto;
+        padding: 4vh;
+    }
+
+    .goaldiv h1, .profilediv h1, .whatwedo_div h1 {
+        font-size: 2.2rem;
+    }
+
+    .goaldiv p, .profilediv p, .whatwedo_div p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about_detail1, .about_detail2, .about_detail3 {
+        margin: 3vh 3vh;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .goaldiv, .profilediv, .whatwedo_div {
+        width: 100%;
+        padding: 3vh;
+    }
+
+    .goaldiv h1, .profilediv h1, .whatwedo_div h1 {
+        font-size: 2rem;
+    }
+
+    .goaldiv p, .profilediv p, .whatwedo_div p {
+        font-size: 1.1rem;
+    }
+}
