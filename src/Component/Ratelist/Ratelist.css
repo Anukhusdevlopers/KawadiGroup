@@ -19,7 +19,7 @@
 }
 
 .ratelist h1 {
-  font-size: 5rem;
+  font-size: 3.5rem;
   margin-top: 10px;
   color: #017070;
   text-align: center;
@@ -79,13 +79,13 @@
 }
 
 .box h4 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #017070;
   padding: 5px;
 }
 
 .box h5 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #011313;
   margin-bottom: 10px;
 }
@@ -107,6 +107,7 @@
   border-radius: 12px;
   cursor: pointer;
   padding: 10px 25px;
+  font-size: 1rem;
  }
 .pup_btn{
   margin-left: 10px;
@@ -117,6 +118,7 @@
   cursor: pointer;
   padding: 10px 20px;
 
+  font-size: 1rem;
 
 }
 /* Responsive styles for button container */
@@ -138,8 +140,8 @@
   }
 
   .buttoncontainer button {
-    font-size: 0.8rem; /* Further reduce font size */
-    padding: 6px 12px; /* Further reduce padding */
+    font-size: 1rem; /* Further reduce font size */
+    padding: 8px 15px; /* Further reduce padding */
   }
 }
 
@@ -148,8 +150,8 @@
     margin: 10px auto; /* Minimal margin on very small screens */
   }
 
-  .buttoncontainer button {
-    font-size: 0.7rem; /* Smallest font size */
-    padding: 5px 10px; /* Minimal padding */
-  }
+  /* .buttoncontainer button {
+    font-size: 0.7rem; 
+    padding: 5px 10px; 
+  } */
 }
