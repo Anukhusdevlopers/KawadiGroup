@@ -12,7 +12,7 @@
   
   .title {
     text-align: center;
-    color: #087373;
+    color: #368735;
     font-size: 2.5rem;
     margin-bottom: 20px;
     font-family: sans-serif;
@@ -63,7 +63,7 @@
   .submit-btn {
     display: block;
     width: 100%;
-    background-color: #087373;
+    background-color: #86c385;
     color: white;
     padding: 10px;
     border: none;
@@ -75,7 +75,7 @@
   }
   
   .submit-btn:hover {
-    background-color: #087373;
+    background-color: #368735;
   }
   
 

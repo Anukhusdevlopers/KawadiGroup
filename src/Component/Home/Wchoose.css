@@ -8,7 +8,7 @@
   }
   
   .section4 h1 {
-    color: #087373;
+    color: #368735;
     font-size: 3rem;
     margin-bottom: 10vh;
     text-align: center;
@@ -34,7 +34,7 @@
     width: 14vw; /* Responsive width */
     height: 14vw; /* Responsive height to maintain aspect ratio */
     border-radius: 50%;
-    background: linear-gradient(to top, #087373 50%, rgb(197, 196, 196) 50%);
+    background: linear-gradient(to top, #61ab60 50%, rgb(197, 196, 196) 50%);
     display: flex;
     justify-content: center;
     align-items: center;

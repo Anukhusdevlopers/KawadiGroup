@@ -7,9 +7,9 @@ import Footer from '../Home/footer'
 const Blogpage = () => {
   return (
     <div>
-        <Navbar/>
-        <Blog/>
-        <Footer/>
+      <Navbar userdisplay="none" tab="Login" logindisplay="initial" onclickroute="/login" loginover="none" />
+      <Blog />
+      <Footer />
     </div>
   )
 }

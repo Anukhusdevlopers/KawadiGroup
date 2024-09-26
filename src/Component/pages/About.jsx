@@ -8,10 +8,11 @@ import About_Details from '../About/About_Details'
 const About = () => {
     return (
         <>
-            <Navbar />
+
+            <Navbar userdisplay="none" tab="Login" logindisplay="initial" onclickroute="/login" loginover="none" />
             <AboutHeading />
-            <MissionCards/>
-            <About_Details/>
+            <MissionCards />
+            <About_Details />
             <Footer />
         </>
     )

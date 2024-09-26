@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import './Header.css'
 import header from '../../assets/header.png'
 
@@ -7,6 +7,8 @@ import 'aos/dist/aos.css';
 
 
 const Header = () => {
+
+
   useEffect(() => {
     AOS.init({ duration: 2000 });
     AOS.refresh(); // Refresh AOS animations after rendering
@@ -14,6 +16,7 @@ const Header = () => {
 
   return (
     <>
+
       <section className="hero" data-aos="fade-up">
         <div className="hero-text" >
           <h3 ><i> Online Scrap Pickup Service</i></h3>
@@ -28,9 +31,13 @@ const Header = () => {
       </section>
 
       {/* Add this image container for 480px and below */}
-      <section className="hero-image-container" data-aos="fade-up">
+      <section className="hero-image-container" >
         <img src={header} alt="Scrap pickup" />
       </section>
+
+
+
+
     </>
   );
 };

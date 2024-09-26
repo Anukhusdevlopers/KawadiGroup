@@ -3,11 +3,11 @@ nav{
   top: 0; 
   /* min-height:13vh; */
   width: 100%;
-  height: 90px;
+  min-height: 90px;
   background-color: #fff;
   padding:0 0 0 20vh ;
   display: flex;
-  color: #087373;
+  color: #368735;
   align-items: center;
   justify-content:space-between;
   z-index: 1000;
@@ -29,7 +29,7 @@ nav{
 .elem #elemlink , #user{
   font-size: 1rem;
   font-weight: 600;
-  color: #087373;
+  color: #368735;
   text-decoration: none;
   text-transform: uppercase;
   display: flex ;
@@ -59,7 +59,7 @@ nav{
 .hamburger div {
   width: 35px;
   height: 3px;
-  background-color: #087373;
+  background-color: #368735;
   margin: 4px 0;
   transition: all 0.3s ease;
 }
@@ -110,12 +110,43 @@ nav{
 .mobilenav a{
   font-size: 1rem;
   font-weight: 600;
-  color: #087373;
+  color: #368735;
   text-decoration: none;
   text-transform: uppercase;
   margin-bottom: 3vh;
   line-height: 30px;
 }
+
+
+
+/* whatsapp or call icon */
+
+.cntcticon{
+  height: 18vh;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  padding: 0 4vh;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  top: 78vh;
+}
+.cntcticon .wbicon,.callicon{
+  height: 7.5vh;
+  width: 7.5vh;
+  border-radius: 50%;
+  background-color: #5cba5b;
+  display: flex;
+  color: #fff;
+  font-size: 3rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
 
 @media(max-width:1300px){
 nav{
@@ -177,6 +208,14 @@ nav{
 .MY_logo img{
   width: 120px;
 }
+.cntcticon{
+  padding: 0 2vh;
+  /* height: 16vh; */
+}
+/* .cntcticon .wbicon , .callicon{
+  height: 7.5vh;
+  width: 7vh;
+} */
 }
 
 @media(min-height:1200px){

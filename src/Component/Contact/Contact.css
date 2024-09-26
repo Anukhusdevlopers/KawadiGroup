@@ -36,7 +36,7 @@
 
 .contactpage .card h1 {
     font-size: 1.8rem;
-    color: #087373;
+    color: #368735;
 }
 
 .contactpage .card h4 {
@@ -314,13 +314,13 @@
 }
 .ctct_form_btn{
     padding: 10px 35px;
-    background-color: rgb(166, 248, 248);
+    background-color: #7aa779;
     border: none;   
-    color:rgb(8, 161, 161) ;
+    color:white ;
    border-radius: 5px;
 }
 .ctct_form_btn:hover{
-    background-color: rgb(78, 224, 224); 
+    background-color: #368735; 
     color: #fff;
     transition: all 0.4s ease-in-out;
 }

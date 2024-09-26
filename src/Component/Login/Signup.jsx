@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 import './Signup.css'
-import Navbar from "../Home/Navbar";
-import Footer from "../Home/footer";
 
 function Signup() {
     return (

@@ -11,11 +11,12 @@
 .about_card {
   position: relative;
   text-align: center;
-  background-color: #226529fe;
+  background-color: #ffffff;
   width: 50vh;
   height: 64vh;
   overflow: hidden;
   transition: 0.3s ease-in-out;
+  text-align: center;
 }
 
 .about_card img {
@@ -33,7 +34,7 @@
   left: 0;
   right: 0;
   padding: 18px 18px 10px 18px;
-  color: white;
+  color: #087373;
   background-color: transparent;
   transition: 0.3s ease-in-out;
 }
@@ -42,7 +43,7 @@
   text-align: center;
   top: 0;
   height: 100%;
-  background-color: #226529d4;
+  background-color: #71a870;
   padding-top: 12vh;
 }
 
@@ -54,19 +55,25 @@
   margin-bottom: 5px;
   font-size: 2.2rem;
   transition: 0.3s ease-in-out;
+  text-align: center;
+  color: #368735;
 }
 
 .about_card:hover h1 {
   font-size: 2rem;
+  color: #ffffff;
 }
 
 .about_card p {
   font-size: 1.2rem;
   transition: 0.3s ease-in-out;
+  text-align: center;
+  color: #71a870;
 }
 
 .about_card:hover p {
   font-size: 1.2rem;
+  color: #ffffff;
 }
 
 /* Responsive Design */

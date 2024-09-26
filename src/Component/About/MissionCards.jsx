@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./MissionCards.css";
+import goal from '../../assets/goal1.jpg'
+import profile from '../../assets/profile.jpg'
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const MissionCards = () => {
+
+  useEffect(()=>{
+    AOS.init({duration:2000});
+    AOS.refresh();
+  },[])
+
   return (
     <>
       <div className="about_sect">
@@ -15,7 +26,7 @@ const MissionCards = () => {
               to get it recycled.
             </p>
           </div>
-          <img src="https://tse2.mm.bing.net/th?id=OIP.0NaYqqPpXyUf8rCKLV8uSwHaE8&pid=Api&P=0&h=220" alt="Mission" />
+          <img data-aos="flip-left" src="https://tse2.mm.bing.net/th?id=OIP.0NaYqqPpXyUf8rCKLV8uSwHaE8&pid=Api&P=0&h=220" alt="Mission" />
       
         </div>
 
@@ -28,7 +39,7 @@ const MissionCards = () => {
               our mission is to provide a convenient solution.
             </p>
           </div>
-          <img src="https://static.vecteezy.com/system/resources/previews/022/448/291/large_2x/save-earth-day-poster-environment-day-nature-green-ai-generative-glossy-background-images-tree-and-water-free-photo.jpg" alt="Approach" />
+          <img data-aos="flip-left" src="https://static.vecteezy.com/system/resources/previews/022/448/291/large_2x/save-earth-day-poster-environment-day-nature-green-ai-generative-glossy-background-images-tree-and-water-free-photo.jpg" alt="Approach" />
         
         </div>
 
@@ -41,7 +52,35 @@ const MissionCards = () => {
               over-exploitation of natural resources and maximize recycling.
             </p>
           </div>
-          <img src="https://tse1.mm.bing.net/th?id=OIP.k99JMRreLIAWiDtj-bzT5gAAAA&pid=Api&P=0&h=220" alt="Vision" />
+          <img data-aos="flip-left" src="https://tse1.mm.bing.net/th?id=OIP.k99JMRreLIAWiDtj-bzT5gAAAA&pid=Api&P=0&h=220" alt="Vision" />
+          
+        </div>
+
+        
+        <div className="about_card">
+        <div className="card_content">
+            <h1>Our Goal</h1>
+            <p>
+              Our vision is to bring a circular economy into reality where
+              used products are manufactured into new products to minimize the
+              over-exploitation of natural resources and maximize recycling.
+            </p>
+          </div>
+          <img data-aos="flip-left" src={goal} alt="Vision" />
+          
+        </div>
+
+        
+        <div className="about_card">
+        <div className="card_content">
+            <h1>Our Profile</h1>
+            <p>
+              Our vision is to bring a circular economy into reality where
+              used products are manufactured into new products to minimize the
+              over-exploitation of natural resources and maximize recycling.
+            </p>
+          </div>
+          <img data-aos="flip-left" src={profile} alt="Vision" />
           
         </div>
       </div>

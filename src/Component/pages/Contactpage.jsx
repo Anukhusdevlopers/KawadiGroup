@@ -7,10 +7,10 @@ import Footer from '../Home/footer'
 const Contactpage = () => {
   return (
     <div>
-         <Navbar userdisplay="none" />
-         <Contact/>
-         <Feedback/>
-         <Footer/>
+      <Navbar userdisplay="none" tab="Login" logindisplay="initial" onclickroute="/login" loginover="none" />
+      <Contact />
+      <Feedback />
+      <Footer />
     </div>
   )
 }

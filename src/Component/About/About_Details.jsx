@@ -1,9 +1,12 @@
 import React from 'react'
 import './AboutDetail.css'
+
+
+
 const About_Details = () => {
   return (
     <>
-      <div className="about_detail1">
+      {/* <div className="about_detail1">
         <div className="goaldiv">
           <h1>Our Goal</h1>
           <p>
@@ -25,7 +28,7 @@ const About_Details = () => {
           </p>
         </div>
 
-      </div>
+      </div> */}
       <div className="about_detail3">
         <div className="whatwedo_div">
           <h1>What We Do</h1>

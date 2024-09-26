@@ -6,9 +6,9 @@ import Footer from '../Home/footer'
 const Ratelistpage = () => {
   return (
     <div>
-       <Navbar userdisplay="none" />
-       <Ratelist/>
-       <Footer/>
+      <Navbar userdisplay="none" tab="Login" logindisplay="initial" onclickroute="/login" loginover="none" />
+      <Ratelist />
+      <Footer />
     </div>
   )
 }
