@@ -22,15 +22,14 @@ function OtpSend(val) {
         setFormData({ ...formData, [name]: value });
     };
 
-
     // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true); // Start loading
         try {
             const [login, otp] = await Promise.all([
-                // axios.post('http://localhost:5000/kawadiwala/login', formData),
-                // axios.post('http://localhost:5000/kawadiwala/send-otp', formData) // Fix typo 'formData'
+                axios.post('http://localhost:5000/kawadiwala/login', formData),
+                axios.post('http://localhost:5000/kawadiwala/send-otp', formData) // Fix typo 'formData'
             ]);
             setResponse([login.data, otp.data]);
             alert('User created and OTP sent Successfuly');
