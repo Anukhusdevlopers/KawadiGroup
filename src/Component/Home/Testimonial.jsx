@@ -95,8 +95,8 @@ export default function Testimonial() {
                                     <i class="fa-solid fa-quote-right fa-3x" ></i>
                                     {/* <img src="https://cdn-icons-png.flaticon.com/512/4992/4992676.png" alt="" style={{height:'8vh',width:'8vh'}}/> */}
                                   </div>
-                                    <p style={{ textAlign: 'center', color: '#fff', margin: '0 2vh 2vh', fontFamily: 'sans-serif' }}>{val.text} </p>
-                                    <h1 style={{ fontSize: '2rem', fontFamily: 'sans-serif', color: '#fff', textAlign: 'center' }}>{val.h1} </h1>
+                                    <p style={{ textAlign: 'center', color: '#103810', margin: '0 2vh 2vh', fontFamily: 'sans-serif' }}>{val.text} </p>
+                                    <h1 style={{ fontSize: '2rem', fontFamily: 'sans-serif', color: '#103810', textAlign: 'center' }}>{val.h1} </h1>
                                 </div>
                             </SwiperSlide>
                         )

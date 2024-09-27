@@ -53,9 +53,11 @@ const VerifyOtp = (val) => {
     setLoading(true);
   
     try {
-      const resendResult = await axios.post('http://localhost:5000/kawadiwala/resend-otp', {
-        phoneNumber: otpData.phoneNumber,  // Only send the phoneNumber
-      });
+      const resendResult = 
+      // await axios.post('http://localhost:5000/kawadiwala/resend-otp',
+      //    {
+      //   phoneNumber: otpData.phoneNumber,  // Only send the phoneNumber
+      // });
       setResendOtpResponse(resendResult.data);
       alert("OTP Resent");
     } catch (error) {

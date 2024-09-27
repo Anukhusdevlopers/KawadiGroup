@@ -17,7 +17,7 @@ const Wchoose = () => {
     return (
         <>
             <div className="section4">
-                <h1>Why Online Kawadiwala</h1>
+                <h1>Why Choose Online Kawadiwala</h1>
                 <div className="section4_card" >
                     <div className="sect4" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
                         <div className="circle">

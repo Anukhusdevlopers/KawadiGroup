@@ -10,13 +10,14 @@ const Footer = () => {
                     <div className="block">
                         <h2>Quick Links</h2>
                         <h4>Home</h4>
-                        <h4>Login</h4>
+                        <h4>About</h4>
+                        <h4>Ratelist</h4>
+                        <h4>Blog</h4>
                         <h4>Contact US</h4>
                     </div><div className="block">
                         <h2>Links List</h2>
                         <h4>Help Center</h4>
                         <h4>Forums</h4>
-                        <h4>Blog</h4>
                     </div>
                     <div className="block">
                         <h2>Others Pages</h2>

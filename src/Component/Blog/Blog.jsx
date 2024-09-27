@@ -26,7 +26,7 @@ const Blog = () => {
   return (
     <>
         <div className="blogpage">
-            <h1><span>Our Blogs</span></h1>
+            {/* <h1><span>Our Blogs</span></h1> */}
             <div className="blogcontainer">
                 {
                     blogdata.map((val)=>{

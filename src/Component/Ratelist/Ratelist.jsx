@@ -57,7 +57,7 @@ const Ratelist = () => {
     <>
      
       <div className="ratelist">
-        <h1>Scrap Rates</h1>
+        {/* <h1>Scrap Rates</h1> */}
         <div className="buttoncontainer">
           <button onClick={showAll}>All</button>
           <button onClick={showPapers}>Papers</button>

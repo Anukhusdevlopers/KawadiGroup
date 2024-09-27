@@ -10,6 +10,7 @@ const Retailer = () => {
   return (
     <>
      <Navbar logindisplay="none"/>
+    
      <main>
         <Sect1/>
         <Sec2/>

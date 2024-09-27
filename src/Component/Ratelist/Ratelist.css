@@ -1,6 +1,6 @@
 .ratelist {
   position: relative;
-  padding: 15px 0;
+  padding: 15px 0 15vh 0;
   z-index: 1; /* Ensure content appears above the background */
 }
 
@@ -11,10 +11,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../../assets//ratelist.jpg');
+  /* background-image: url('../../assets//ratelist.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  opacity: 0.4; /* Adjust this value for the desired opacity */
+  opacity: 0.4; Adjust this value for the desired opacity */
   z-index: -1; /* Ensure the background stays behind the content */
 }
 
@@ -29,7 +29,7 @@
   display: flex;
   flex-wrap: wrap; /* Allow buttons to wrap to the next line */
   justify-content: center;
-  margin: 80px auto; /* Center horizontally with auto margins */
+  margin: 40px auto; /* Center horizontally with auto margins */
   padding: 0 10px; /* Add some padding on small screens */
 }
 
@@ -37,16 +37,18 @@
   font-size: 1rem;
   margin: 10px; /* Space around buttons */
   padding: 10px 20px;
-  color: #017070;
-  border: 2px solid #017070;
+  color: #368735;
+  background-color: #ebfeeb;
+  border: 2px solid #368735;
   border-radius: 12px;
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Added color transition */
 }
 
 .buttoncontainer button:hover {
-  border-color: #014747;
-  color: white; /* Change text color to white on hover */
+  border-color: #196918;
+  background-color: #196918;
+  color: #e8fae8; /* Change text color to white on hover */
 }
 
 .boxcontainer {
@@ -57,14 +59,14 @@
 }
 
 .box {
-  background-color: aliceblue;
+  background-color: #ebfbeb;
   flex: 0 0 auto;
   width: 230px;
   margin: 10px;
   padding-bottom: 10px;
   border-radius: 0 0 25px 25px;
   text-align: center;
-  box-shadow: 0 0 10px #000a0a;
+  box-shadow: 0 0 8px #000a0a;
   transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
 }
 
@@ -80,7 +82,7 @@
 
 .box h4 {
   font-size: 1.5rem;
-  color: #017070;
+  color: #1f621e;
   padding: 5px;
 }
 
@@ -101,9 +103,9 @@
 } */
  .add_btn{
   margin-right: 10px;
-  background-color: #017070;
+  background-color: #66b465;
   color: #fff;
-  border: 2px solid #017070;
+  border: 2px solid #66b465;
   border-radius: 12px;
   cursor: pointer;
   padding: 10px 25px;
@@ -112,8 +114,8 @@
 .pup_btn{
   margin-left: 10px;
   background-color: transparent;
-  color: #017070;
-  border: 2px solid #017070;
+  color: #66b465;
+  border: 2px solid #66b465;
   border-radius: 12px;
   cursor: pointer;
   padding: 10px 20px;
