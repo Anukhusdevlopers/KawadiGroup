@@ -35,8 +35,8 @@ const VerifyOtp = (val) => {
     e.preventDefault();
 
     try {
-      const result = await axios.post('http://localhost:5000/kawadiwala/verify-otp', otpData);
-      setOtpResponse(result.data);
+      // const result = await axios.post('http://localhost:5000/kawadiwala/verify-otp', otpData);
+      // setOtpResponse(result.data);
       alert('Otp Verified successfully');
       navigate('/afterlogin')
     } catch (error) {

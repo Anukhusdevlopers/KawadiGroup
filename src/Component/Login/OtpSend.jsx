@@ -9,6 +9,7 @@ function OtpSend(val) {
     const [formData, setFormData] = useState({
         name: '',
         phoneNumber: '',
+        otp:'',
         role: 'customer', // Default role selection
     });
 
@@ -23,31 +24,56 @@ function OtpSend(val) {
     };
 
     // Handle form submission
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true); // Start loading
-        try {
-            const [login, otp] = await Promise.all([
-                axios.post('http://localhost:5000/kawadiwala/login', formData),
-                axios.post('http://localhost:5000/kawadiwala/send-otp', formData) // Fix typo 'formData'
-            ]);
-            setResponse([login.data, otp.data]);
-            alert('User created and OTP sent Successfuly');
-            navigate('/otpverify');
-        } catch (error) {
-            console.log(error);
-            alert("Failed process");
-        } finally {
-            setLoading(false); // End loading
-        }
-    };
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     setLoading(true); // Start loading
 
-    
+
+    //     try {
+    //         const [login, otp] = await Promise.all([
+    //             axios.post('http://localhost:5000/kawadiwala/login', formData),
+    //             axios.post('http://localhost:5000/kawadiwala/send-otp', formData) // Fix typo 'formData'
+    //         ]);
+    //         setResponse([login.data, otp.data]);
+    //         alert('User created and OTP sent Successfuly');
+    //         // localStorage.setItem('otp',otp.data);
+    //         navigate('/otpverify');
+    //     } catch (error) {
+    //         console.log(error);
+    //         alert("Failed process");
+    //     } finally {
+    //         setLoading(false); // End loading
+    //     };
+
+
+    //     // send data on email
+
+    //    const sendemail  = () =>{emailjs.send(
+    //     'service_bquo33v',
+    //     'template_9hubbr7',
+    //     formData,
+    //     'cEcCF0wPBcXOls6P5'
+    //     );
+
+    //     sendemail.then(
+    //         (response) => {
+    //             console.log('Send on email',response.status , response.text);
+    //             alert('Email Sent Successfully');
+    //         },
+    //         (err) => {
+    //             console.log('Failed ..',err);
+    //             alert('Failed to send email');
+    //         }
+    //     );
+    // }
+
+    // };
+
 
     return (
         <>
 
-            <form action="" onSubmit={handleSubmit} >
+            <form action=""  >
                 <input
                     className="logininput"
                     type="text"
@@ -82,20 +108,11 @@ function OtpSend(val) {
                     <option value="customer">Customer</option>
                 </select>
 
-                <button type="submit" disabled={loading} style={{ height: '6vh', width: '100%', borderRadius: '50px', border: 'none', padding: '0 2vh', marginBottom: '4vh', backgroundColor: '#333', fontSize: '1.5rem', color: 'white' }}> {/* Disable button while loading */}
+                <button  type="submit" disabled={loading} style={{ height: '6vh', width: '100%', borderRadius: '50px', border: 'none', padding: '0 2vh', marginBottom: '4vh', backgroundColor: '#333', fontSize: '1.5rem', color: 'white' }}> {/* Disable button while loading */}
                     {loading ? 'Processing...' : 'Send Otp'}
                 </button>
                 {loading && <p>Loading...</p>}
 
-            <div style={{width:'20vw'}}>
-
-                {response && (
-                    <div >
-                        <h3>OTP send Response:</h3>
-                        <pre>{JSON.stringify(response[1].otp, null, 2)}</pre>
-                    </div>
-                )}
-</div>
 
             </form>
 
