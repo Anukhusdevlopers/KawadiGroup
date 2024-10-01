@@ -28,14 +28,14 @@ const Footer = () => {
                         <h2>Get in Touch  </h2>
                         <h4>125/30 Sector A near GolMarket Lucknow 241120</h4>
                         <h4>Email</h4>
-                        <h4>xxxxxx@gmail.com</h4>
-                        <h4>Phone : xxxxxxxxx</h4>
+                        <h4>scraphawker7@gmail.com</h4>
+                        <h4>Phone : 80053 63079</h4>
                     </div>
 
 
                 </div>
                 <div className="sociallinks">
-                    <i class="ri-whatsapp-line" ></i>
+                    {/* <i class="ri-whatsapp-line" ></i> */}
                     <i class="ri-instagram-line"></i>
                     <i class="ri-facebook-fill"></i>
                     <i class="ri-twitter-line"></i>

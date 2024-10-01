@@ -73,8 +73,8 @@ const Howitworks = () => {
           </div>
           <div className='textcontainer'>
             <div className="hover-before"></div>
-            <h1 style={{fontSize:'2rem',marginBottom:'2vh'}}>Schedule Pickup Scrap</h1>
-            <p style={{fontSize:'1.2rem'}}>On website or Howitworks, fill a simple four-step form to schedule pickup date and time.</p>
+            <h1 style={{fontSize:'2rem',fontFamily:'sans-serif',marginBottom:'2vh'}}>Schedule Pickup Scrap</h1>
+            <p style={{fontSize:'1.1rem',fontFamily:'sans-serif'}}>On website or Howitworks, fill a simple four-step form to schedule pickup date and time.</p>
           </div>
         </div>
 
@@ -93,8 +93,8 @@ const Howitworks = () => {
           </div>
           <div className='textcontainer'>
             <div className="hover-before"></div>
-            <h1 style={{fontSize:'2rem',marginBottom:'2vh'}}>Pickup Guy at Doorstep</h1>
-            <p style={{fontSize:'1.2rem'}}>Our Pickup Guy will reach your doorstep on the scheduled date & time.</p>
+            <h1 style={{fontFamily:'sans-serif',fontSize:'2rem',marginBottom:'2vh'}}>Pickup Guy at Doorstep</h1>
+            <p style={{fontFamily:'sans-serif',fontSize:'1.2rem'}}>Our Pickup Guy will reach your doorstep on the scheduled date & time.</p>
           </div>
         </div>
 
@@ -113,8 +113,8 @@ const Howitworks = () => {
           </div>
           <div className='textcontainer'>
             <div className="hover-before"></div>
-            <h1 style={{fontSize:'2rem',marginBottom:'2vh'}}>Get Paid for Scrap</h1>
-            <p style={{fontSize:'1.2rem'}}>Get paid according to the weight and pricing.</p>
+            <h1 style={{fontFamily:'sans-serif',fontSize:'2rem',marginBottom:'2vh'}}>Get Paid for Scrap</h1>
+            <p style={{fontFamily:'sans-serif',fontSize:'1.2rem'}}>Get paid according to the weight and pricing.</p>
           </div>
         </div>
       </section>

@@ -1,0 +1,74 @@
+.SellScrap{
+    min-height: 80vh;
+    width: 100%;
+    padding: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.SellScrap h1{
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: sans-serif;
+    color: #368735;
+    margin: 20vh 0  5vh;
+}
+.mapform_cnct{
+    display: flex;
+}
+.SellScrap .form {
+    width: 100%;
+    min-height: 20vh;
+    padding: 5vh;
+}
+.SellScrap .form input,select{
+    margin: 4px 0 4vh;
+    border: 1px solid #999;
+}
+.SellScrap label
+{
+    font-size: 1.1rem;
+    font-family: sans-serif;
+}
+.SellScrap .items{
+    min-height: 40vh;
+    width: 100%;
+    display: flex;
+    padding: 10vh 5vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.item{
+    height: 35vh;
+    width: 15vw;
+    cursor: pointer;
+}
+
+.SellScrap button{
+    padding: 1.2vh 2vh;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #368735;
+    color: #fff;
+    cursor: pointer;
+   }
+
+ .SellScrap strong{
+    font-size: 1.5rem;
+    font-family: sans-serif;
+ }
+
+ @media(max-width:700px){
+    .SellScrap .form{
+        padding: 0;
+    }
+ }
+
+ @media(max-width:450px){
+    .SellScrap {
+        padding: 4vh;
+    }
+ }

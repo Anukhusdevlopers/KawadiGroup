@@ -3,8 +3,12 @@ import './Navbar.css'
 import { Link, NavLink } from 'react-router-dom'
 import 'remixicon/fonts/remixicon.css'
 import logo from '../../assets/LOGO DP.png'
+import OtpSend from '../Login/OtpSend'
 
 const Navbar = (val) => {
+
+
+    // Hamburger
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -15,6 +19,8 @@ const Navbar = (val) => {
     const closeMenu = () => {
         setIsMenuOpen(false);
     };
+
+    // mobile navbar
 
     const [hidden, setHidden] = useState("hidden");
 
@@ -36,7 +42,7 @@ const Navbar = (val) => {
     // whatsapp icon 
 
     const whatsappHandle = () => {
-        const whatsappphoneNumber = '+919151542141';
+        const whatsappphoneNumber = '+918005363079';
         const message = 'Hello, I want to connect you ! ';
         const whatsappurl = `https://wa.me/${whatsappphoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -46,15 +52,28 @@ const Navbar = (val) => {
     // calling icon
 
     const callredirect = () => {
-        const callingNUmber = '+919151542141';
+        const callingNUmber = '+918005363079';
         const callurl = `tel:${callingNUmber}`;
 
         window.open(callurl, '_self');
     };
 
+    // login form
+
+    const [isVisible, setIsVisible] = useState(false);
+
+    // Function to toggle visibility
+    const toggleVisibility = () => {
+        setIsVisible(!isVisible);
+        mobilenavbarhide();
+        toggleMenu(); // Toggle between true and false
+    };
 
     return (
         <>
+            {/* desktop nav
+            <div className="topstrip"></div> */}
+
             <nav>
                 <div className="MY_logo">
                     <img src={logo} alt="" />
@@ -67,9 +86,13 @@ const Navbar = (val) => {
                     <NavLink id='elemlink' to="/ratelist">Rate List</NavLink>
                     <NavLink id='elemlink' to="/contact">Contact Us</NavLink>
 
-                    <Link style={{}} id='elemlink' to={val.onclickroute}>{val.tab} </Link>
-                    {/* <Link style={{display:userdisplay}} id='elemlink' to="" >User </Link>
-                   */}
+                    <Link
+                        id='elemlink'
+                        onClick={toggleVisibility}
+                    >
+                        {val.tab}
+                    </Link>
+
 
 
                 </div>
@@ -79,7 +102,6 @@ const Navbar = (val) => {
                     <div></div>
                 </div>
             </nav>
-
 
 
             {/* for mobile view */}
@@ -93,18 +115,26 @@ const Navbar = (val) => {
                 <NavLink id='elemlink' to="/blog">Blog</NavLink> <br />
                 <NavLink id='elemlink' to="/ratelist">Rate List</NavLink> <br />
                 <Link to="/contact">Contact Us</Link> <br />
+                <Link
+                    id='elemlink'
+                    onClick={toggleVisibility}
+                >
+                    {val.tab}
+                </Link>
 
-                <Link style={{ display: val.logindisplay }} id='elemlink' to={val.onclickroute}>{val.tab} </Link>
-                {/* <div style={{padding:'1vh 0vh 0 13vh', zIndex: '9',opacity:logindisplay ,scale:logindisplay,display:val.logindisplay }} className="loginover">
-                    <Link to="/Retailerlogin" >Retailer </Link> <br />
-                    <Link to="/wholesellerlogin" >Whole Seller</Link>
-                </div> */}
-
-                {/* <div style={{padding:'1vh 0vh 0 13vh', zIndex: '9',opacity:logindisplay ,scale:logindisplay,}} className="loginover">
-                     <Link to="/" >Log Out</Link>
-                </div> */}
             </div>
 
+            {/* loginform */}
+
+            <div className='loginform_cnct' style={{width:'100%',display:'flex',justifyContent:'center',position:'fixed',zIndex:'99',top:'22vh'}}>
+                {
+                    isVisible && (
+                        <OtpSend />
+                    )
+                }
+            </div>
+
+            {/* contact icon wb , call */}
 
             <div className="cntcticon">
                 <div className="callicon" style={{ fontSize: '2.1rem' }}><i onClick={callredirect} class="ri-phone-fill"></i></div>

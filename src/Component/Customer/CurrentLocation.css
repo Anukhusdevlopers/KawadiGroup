@@ -1,0 +1,48 @@
+.currentlocation{
+    min-height: 50vh;
+    width: 100%;
+    padding: 10vh;
+    display: flex;
+}
+.currentlocation h1{
+    font-size: 3rem;
+    font-family: sans-serif;
+    color: #368735;
+    width: 40%;
+    padding-right:10vh ;
+    display: flex;
+    align-items: center;
+    height: 40vh;
+}
+.currentlocation .map{
+    width: 60%;
+    height: 40vh;
+}
+
+@media(max-width:900px){
+   .currentlocation{
+    flex-direction: column;
+   }
+   .currentlocation h1{
+    width: 100%;
+    height: auto;
+    margin-bottom: 5vh;
+    font-size: 2.5rem;
+    padding-right: 0;
+    justify-content: center;
+    text-align: center;
+   }
+   .currentlocation .map{
+    width: 100%;
+   }
+}
+@media(max-width:700px){
+    .currentlocation{
+        padding: 5vh;
+    }
+}
+@media(max-width:700px){
+    .currentlocation{
+        padding: 2vh;
+    }
+}

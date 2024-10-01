@@ -1,16 +1,17 @@
 .logininput::placeholder {
-    color: rgb(114, 114, 114);
+    color: rgb(126, 124, 124);
     opacity: 1; /* Firefox */
     font-size: 1.5rem;
   }
   
  .logininput ::-ms-input-placeholder { /* Edge 12 -18 */
-    color: rgb(124, 123, 123);
+    color: rgb(217, 215, 215);
   }
 
-  .loginbg #loginh1{
+   #loginh1{
     font-size: 4rem;
   }
+
 
 .signupbg,.loginbg {
     height: 100vh;
@@ -24,7 +25,7 @@
     font-family: sans-serif;
     padding: 2vh;
 }
-.txtpart{
+/* .txtpart{
     width: 50%;
     padding: 5vh;
 }
@@ -35,16 +36,23 @@
     display: flex;
     justify-content: center;
     gap: 10vh;
-}
-.signupbg .container .formpart , .loginform{
-    width: 400px;
-    background-color: rgba(255, 255, 255, 0.5);
+} */
+ .loginform{
+    max-width: 800px;
+    background-color:#fff;
+    padding: 5vh;
+    /* background-color: rgb(54, 135, 53,0.7);
     -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); */
 }
-.signupbg .container .formpart input{
-    width: 90%;
+.loginform form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
 }
+
+
 
 
 @media(max-width:1100px) {
@@ -65,9 +73,11 @@
         gap: 0;
         width: 100%;
     }
-    
+ 
 
 }
+
+
 @media(max-width:450px){
     .signupbg .container .formpart input{
         width: 80%;
@@ -77,5 +87,26 @@
     }
     .container{
         width: 100%;
+    }
+   
+}
+@media(max-width:650px){
+    .loginform{
+        width: 400px;
+    }
+    .loginform form{
+        width: 100%;
+    }
+}
+
+@media(max-width:500px){
+    .loginform{
+        width: 350px;
+        padding: 2vh;
+    }
+}
+@media(max-width:400px){
+    .loginform{
+        width: 300px;
     }
 }

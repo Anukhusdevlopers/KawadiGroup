@@ -1,0 +1,41 @@
+.customerHeader {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .customerHeader::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://www.fugetroncorp.com/wp-content/uploads/2021/11/blog-page-banner-image.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9; 
+    z-index: -1; 
+  }
+  
+  .customerHeader h1 {
+    font-size: 3.5rem;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    z-index: 1; /* Keep the text on top */
+  }
+  .customerHeader h2 {
+    font-size: 2.5rem;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    z-index: 1; /* Keep the text on top */
+  }
+  

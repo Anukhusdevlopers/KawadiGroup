@@ -1,0 +1,118 @@
+.Sellformpage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.Sellformpage .formcnct{
+    width: 70%;
+    background-color: #fff;
+    display: flex;
+    box-shadow:0 0 5px #333;
+    border-radius: 12px;
+    position: relative;
+    top: -30px;
+}
+.formsection{
+    min-height: 30vh;
+    width: 70%;
+    position: relative;
+    padding: 0 5vh 4vh 5vh;
+}
+.icntray{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    top: -30px;
+}
+.formsection .icntray .cir{
+    height: 55px;
+    min-width: 55px;
+    border-radius: 50%;
+    margin: 0 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cffece;
+    color: #398938;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.formsection .form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap ;
+    gap: 30px;
+}
+.formsection .form input{
+    width: 45%;
+}
+.formsection .form button{
+    padding: 1vh 3vh;
+    font-size: 1.4rem;
+    border-radius: 12px;
+    background-color: #368735;
+    color: #fff;
+    border: none;
+}
+.formcnct .rgt_text{
+    padding: 5vh;
+    width: 30%;
+}
+.formcnct .rgt_text h2{
+    font-size: 2.2rem;
+    color: #368735;
+    font-family: sans-serif;
+}
+
+
+
+@media(max-width:1300px){
+    .Sellformpage .formcnct{
+        top: -60px;
+        width: 90%;
+    }
+}
+
+@media(max-width:1200px){
+    .Sellformpage .formcnct{
+        top: 50px;
+    }
+}
+@media(max-width:850px){
+    .Sellformpage{
+        margin-bottom: 30vh;
+    }
+    .Sellformpage .formcnct{
+        flex-direction: column;
+
+    }
+    .formsection{
+        width: 100%;
+    }
+    .formcnct .rgt_text{
+        width: 100%;
+        padding-top: 0;
+    }
+    .formcnct .rgt_text h2{
+        text-align: center;
+    }
+}
+
+@media(max-width:550px){
+    .formsection .form input{
+        width: 250px;
+}   
+
+    .formsection .icntray .cir{
+        margin: 0 2vh;
+    }
+
+}
+@media(max-width:400px){
+    .formsection .icntray .cir{
+        margin: 0 1vh;
+    }
+}

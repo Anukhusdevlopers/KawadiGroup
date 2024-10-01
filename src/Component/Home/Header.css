@@ -10,7 +10,7 @@
     align-items: center;
     padding: 1px 30px 1px 80px;
     background-color: #fff;
-    margin-bottom: 90px;
+    /* margin-bottom: 90px; */
     height: 95vh;
     width: 100%;
     position: relative;
@@ -87,7 +87,7 @@
         align-items: center;
         padding: 1px 30px 1px 80px;
         background-color: #fff;
-        margin-bottom: 90px;
+        /* margin-bottom: 90px; */
         height: 95vh;
         position: relative;
         flex-wrap: wrap;

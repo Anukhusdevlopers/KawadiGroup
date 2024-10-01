@@ -10,6 +10,7 @@ import Header from '../Home/Header'
 import Howitworks from '../Home/Howitworks'
 import NumCountup from '../Home/NumCountup'
 import Wchoose from '../Home/Wchoose'
+import SellForm from '../Home/SellForm';
 
 
 
@@ -21,6 +22,7 @@ const Home = (val) => {
     <>
       <Navbar userdisplay="none" tab="Login" logindisplay="initial" onclickroute="/login" loginover="none" />
      <Header />
+     <SellForm/>
       <Howitworks />
       <Wchoose />
       <Testimonial />

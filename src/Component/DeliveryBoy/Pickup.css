@@ -1,0 +1,39 @@
+.pickup{
+    min-height:50vh ;
+    width: 100%;
+}
+.pickup h1{
+    font-size: 3rem;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 10vh;
+    color: #317d30;
+}
+.pickup .requests{
+    padding: 5vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5vh;
+}
+.requestCard{
+    padding: 4vh;
+    min-height: 30vh;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 0 5px #317d30;
+}
+.requestCard p{
+    font-size: 1.2rem;
+    margin-bottom: 1.5vh;
+    font-family: sans-serif;
+}
+.requestCard button{
+    padding: 0.9vh 3vh;
+    font-size: 1.3rem;
+    margin: 2vh;
+    border-radius: 12px;
+    border: none;
+    background-color: #317d30;
+    color: #fff;
+}
