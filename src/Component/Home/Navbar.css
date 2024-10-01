@@ -131,7 +131,7 @@ nav{
   flex-direction: column;
   align-items: end;
   justify-content: space-between;
-  top: 78vh;
+  top: 77%;
 }
 .cntcticon .wbicon,.callicon{
   height: 7.5vh;
@@ -222,7 +222,7 @@ nav{
 } */
 
 .cntcticon{
-  top: 73vh;
+  top: 73%;
 }
 }
 
