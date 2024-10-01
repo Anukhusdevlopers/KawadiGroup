@@ -62,7 +62,7 @@ function OtpSend(val) {
 
         } catch (error) {
             console.log(error);
-            // alert("Failed process");
+            // alert("Failed process");   // recomment
             setIsVisible(!isVisible);
         } finally {
             setLoading(false); // End loading

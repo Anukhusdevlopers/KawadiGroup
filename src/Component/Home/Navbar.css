@@ -220,6 +220,10 @@ nav{
   height: 7.5vh;
   width: 7vh;
 } */
+
+.cntcticon{
+  top: 73vh;
+}
 }
 
 @media(min-height:1200px){
