@@ -1,0 +1,27 @@
+.requestpage h1{
+    text-align: center;
+    font-size: 2.5rem;
+    color: #368735;
+    font-family: sans-serif;
+}
+.requestpage .request_cnct{
+    min-height: 50vh;
+    padding: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vh;
+}
+.requestcard{
+    min-height:20vh ;
+    width:400px;
+    padding: 5vh;
+    box-shadow: 0 0 5px #555;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+.requestcard p,li{
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    margin: 1vh;
+}

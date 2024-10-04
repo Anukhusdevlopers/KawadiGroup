@@ -19,14 +19,12 @@ const Header = () => {
 
       <section className="hero" data-aos="fade-up">
         <div className="hero-text" >
-          <h3 ><i> Online Scrap Pickup Service</i></h3>
+          <h3 ><i> Turn Your Scrap into Cash</i></h3>
           <h1 >Online Kabadiwala</h1>
           <p >
-            Online Kabadiwala, we provide our service to people at their place,
-            we pickup scrap from your home, office, or workplace at the best
-            price, which makes our customers happy.
+          We believe in turning waste into wealth. Our hassle-free scrap collection service helps you declutter your space while contributing to a cleaner, greener environment.
           </p >
-          <button className="btn" >Book Now</button>
+          {/* <button className="btn" >Book Now</button> */}
         </div>
       </section>
 

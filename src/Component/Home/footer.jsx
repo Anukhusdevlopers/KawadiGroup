@@ -36,9 +36,9 @@ const Footer = () => {
                 </div>
                 <div className="sociallinks">
                     {/* <i class="ri-whatsapp-line" ></i> */}
-                    <i class="ri-instagram-line"></i>
-                    <i class="ri-facebook-fill"></i>
-                    <i class="ri-twitter-line"></i>
+                    <i className="ri-instagram-line"></i>
+                    <i className="ri-facebook-fill"></i>
+                    <i className="ri-twitter-line"></i>
                 </div>
                 <div className="lower"><h2>&copy; 2024 Online Kawadiwala | All Right Reserved </h2></div>
             </footer>

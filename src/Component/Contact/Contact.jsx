@@ -29,13 +29,13 @@ const Contact = () => {
       <div className='card' data-aos="flip-left">
         <img src={call} alt="" style={{ width: "40px", height: "40px" }} />
         <h1>Call Us</h1>
-        <h4>+91 5487814556</h4>
+        <h4>+91 8005363079</h4>
         <p>Talk to our customer care executive service for any inquiry</p>
       </div>
       <div className='card' data-aos="flip-left">
         <img src={mail} alt="" style={{ width: "40px", height: "40px" }} />
         <h1>Contact Us </h1>
-        <h4>onlinekawadiwal@gmail.com</h4>
+        <h4>scraphawker7@gmail.com</h4>
         <p>If you have any inquiry you can also mail us.</p>
       </div>
 

@@ -16,6 +16,7 @@
 }
 .mapform_cnct{
     display: flex;
+    flex-direction: column;
 }
 .SellScrap .form {
     width: 100%;

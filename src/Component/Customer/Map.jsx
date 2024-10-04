@@ -31,6 +31,13 @@ const CurrentLocationMapWithAddress = () => {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
+
+
+
+          // Save latitude and longitude to localStorage
+          localStorage.setItem('latitude', latitude);
+          localStorage.setItem('longitude', longitude);
+
           setCoordinates({ latitude, longitude });
           fetchAddress(latitude, longitude); // Fetch address using OpenCage API
           setError(null); // Clear any previous errors
@@ -54,6 +61,10 @@ const CurrentLocationMapWithAddress = () => {
 
       if (response.data && response.data.results && response.data.results.length > 0) {
         setAddress(response.data.results[0].formatted);
+
+
+        localStorage.setItem('address', address);
+
       } else {
         setError("Unable to fetch address.");
       }

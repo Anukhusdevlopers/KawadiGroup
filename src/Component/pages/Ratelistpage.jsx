@@ -7,8 +7,8 @@ import RatelistHeader from '../Ratelist/RatelistHeader'
 const Ratelistpage = () => {
   return (
     <div>
-      <Navbar userdisplay="none" tab="Login" logindisplay="initial" onclickroute="/login" loginover="none" />
-      <RatelistHeader/>
+       <Navbar userdisplay="none" customernav="none" mainnav="" logindisplay="initial" onclickroute="/login"  />
+       <RatelistHeader/>
       <Ratelist />
       <Footer />
     </div>

@@ -33,10 +33,7 @@ const About_Details = () => {
         <div className="whatwedo_div">
           <h1>What We Do</h1>
           <p>
-            We are dedicated to making the world a better place, one piece of
-            scrap at a time. Best online Kabadiwala delhi, sell scrap online,
-            Our mission is to provide a convenient and efficient service that
-            pick up scrap from your doorstep and delivers it to recycling.
+          Scrap Hawker specializes in the collection and recycling of scrap materials. Whether it’s old newspapers, plastics, metals, or electronics, we provide a hassle-free solution to declutter your space and make money from your waste.
           </p>
         </div>
       </div>
