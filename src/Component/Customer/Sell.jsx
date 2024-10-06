@@ -107,6 +107,7 @@ const Sell = () => {
 
     return (
         <>
+       
             <div className="SellScrap">
                 <h1>What would you like to sell ?</h1>
                 <div className='mapform_cnct'>

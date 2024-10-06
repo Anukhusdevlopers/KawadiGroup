@@ -24,6 +24,7 @@ nav{
   display: flex;
   align-items: center;
   justify-content: end;
+  justify-content: end;
   gap: 3vh;
 }
 .elem #elemlink , #user{
@@ -199,6 +200,9 @@ nav{
   .topstrip{
     gap: 20vw;
   }
+  .topstrip{
+    gap: 20vw;
+  }
 }
 @media(max-width:500px){
 nav{
@@ -221,6 +225,9 @@ nav{
 
 .cntcticon{
   top: 73%;
+}
+.topstrip{
+  display: none;
 }
 .topstrip{
   display: none;

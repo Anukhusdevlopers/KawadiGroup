@@ -18,6 +18,8 @@ const VerifyOtp = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+
+
   // Fetch stored name and number from localStorage when the component mounts
   useEffect(() => {
     const storedName = localStorage.getItem('name');
@@ -35,6 +37,7 @@ const VerifyOtp = () => {
     setOtpData({ ...otpData, [name]: value });
   };
 
+  // Handle form submission (verify OTP)
   // Handle form submission (verify OTP)
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -58,6 +61,7 @@ const VerifyOtp = () => {
     }
   };
 
+  // Resend OTP
   // Resend OTP
   const resendOtp = async (e) => {
     e.preventDefault();
@@ -90,6 +94,7 @@ const VerifyOtp = () => {
             style={{ height: '6vh', width: '100%', color: '#555', background: 'transparent', borderRadius: '50px', border: '2px solid #555', padding: '0 2vh', fontSize: '1.5rem', marginBottom: '2vh' }}
           />
         </div>
+   
 
         <button type="submit" style={{cursor:'pointer', height: '6vh', width: '100%', borderRadius: '50px', border: 'none', padding: '0 2vh', marginBottom: '4vh', backgroundColor: '#368735', fontSize: '1.5rem', color: 'white' }}>
           Verify OTP
@@ -100,7 +105,7 @@ const VerifyOtp = () => {
         </button>
         {loading && <p>Loading...</p>}
       </form>
-
+    
       {resendOtpResponse && (
         <div>
           <h3>OTP Resend Response:</h3>

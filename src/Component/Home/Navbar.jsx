@@ -64,6 +64,8 @@ const Navbar = (val) => {
 
   
 
+  
+
     // Function to toggle visibility
     const toggleVisibility = () => {
         setIsVisible(!isVisible);
@@ -80,6 +82,7 @@ const Navbar = (val) => {
                     <img src={logo} alt="" />
                 </div>
 
+
                     <div className='elem' style={{display:val.mainnav}}>
                         <NavLink id='elemlink' to="/">Home</NavLink>
                         <NavLink id='elemlink' to="/about">About</NavLink>
@@ -93,6 +96,8 @@ const Navbar = (val) => {
                         >
                             Login
                         </Link>
+                       
+               
 
 
 
@@ -123,6 +128,8 @@ const Navbar = (val) => {
 
            
 
+           
+
             {/* for mobile view */}
 
 
@@ -138,14 +145,14 @@ const Navbar = (val) => {
                     id='elemlink'
                     onClick={toggleVisibility}
                 >
+                  
                     Login
                 </Link>
 
             </div>
 
             {/* loginform */}
-
-            <div className='loginform_cnct' style={{ width: '100%', display: 'flex', justifyContent: 'center', position: 'fixed', zIndex: '99', top: '22vh' }}>
+  <div className='loginform_cnct' style={{ width: '100%', display: 'flex', justifyContent: 'center', position: 'fixed', zIndex: '99', top: '22vh' }}>
                 {
                     isVisible && (
                         <OtpSend />
@@ -156,7 +163,7 @@ const Navbar = (val) => {
             {/* contact icon wb , call */}
 
             <div className="cntcticon">
-                <div className="callicon" style={{ fontSize: '2.1rem' }}><i onClick={callredirect} className="ri-phone-fill"></i></div>
+               <div className="callicon" style={{ fontSize: '2.1rem' }}><i onClick={callredirect} className="ri-phone-fill"></i></div>
                 <div className="wbicon" style={{ fontSize: '2.4rem' }}><i onClick={whatsappHandle} className="ri-whatsapp-line"></i></div>
             </div>
         </>

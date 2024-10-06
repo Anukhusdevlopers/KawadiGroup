@@ -45,6 +45,13 @@ const CurrentLocationMapWithAddress = () => {
           localStorage.setItem('latitude', latitude);
           localStorage.setItem('longitude', longitude);
 
+
+
+
+          // Save latitude and longitude to localStorage
+          localStorage.setItem('latitude', latitude);
+          localStorage.setItem('longitude', longitude);
+
           setCoordinates({ latitude, longitude });
           fetchAddress(latitude, longitude); // Fetch address using OpenCage API
           setError(null); // Clear any previous errors

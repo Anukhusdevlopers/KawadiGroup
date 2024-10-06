@@ -24,7 +24,9 @@ const Header = () => {
           <h1 >Online Scrap Hawker</h1>
           <p >
           We believe in turning waste into wealth. Our hassle-free scrap collection service helps you declutter your space while contributing to a cleaner, greener environment.
+          We believe in turning waste into wealth. Our hassle-free scrap collection service helps you declutter your space while contributing to a cleaner, greener environment.
           </p >
+          {/* <button className="btn" >Book Now</button> */}
           {/* <button className="btn" >Book Now</button> */}
         </div>
       </section>
