@@ -15,10 +15,15 @@ footer{
     width: 25%;
     color: White;
   }
+  footer .upper .block a{
+    text-decoration: none;
+    color: #fff ;
+  }
   footer .upper .block h2{
     font-size: 1.2rem;
     margin-bottom: 3vh;
     font-weight: 700;
+    color: #fff;
   }
   footer .upper .block h4{
     font-size: 1.1rem;

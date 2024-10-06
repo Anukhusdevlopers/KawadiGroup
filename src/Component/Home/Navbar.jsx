@@ -62,6 +62,8 @@ const Navbar = (val) => {
 
     const [isVisible, setIsVisible] = useState(false);
 
+  
+
     // Function to toggle visibility
     const toggleVisibility = () => {
         setIsVisible(!isVisible);
@@ -71,31 +73,47 @@ const Navbar = (val) => {
 
     return (
         <>
-            {/* desktop nav
-            <div className="topstrip"></div> */}
+            
 
             <nav>
                 <div className="MY_logo">
                     <img src={logo} alt="" />
                 </div>
 
-                <div className='elem'>
-                    <NavLink id='elemlink' to="/">Home</NavLink>
-                    <NavLink id='elemlink' to="/about">About</NavLink>
-                    <NavLink id='elemlink' to="/blog">Blog</NavLink>
-                    <NavLink id='elemlink' to="/ratelist">Rate List</NavLink>
-                    <NavLink id='elemlink' to="/contact">Contact Us</NavLink>
+                    <div className='elem' style={{display:val.mainnav}}>
+                        <NavLink id='elemlink' to="/">Home</NavLink>
+                        <NavLink id='elemlink' to="/about">About</NavLink>
+                        <NavLink id='elemlink' to="/blog">Blog</NavLink>
+                        <NavLink id='elemlink' to="/ratelist">Rate List</NavLink>
+                        <NavLink id='elemlink' to="/contact">Contact Us</NavLink>
 
-                    <Link
-                        id='elemlink'
-                        onClick={toggleVisibility}
-                    >
-                        {val.tab}
-                    </Link>
+                        <Link
+                            id='elemlink'
+                            onClick={toggleVisibility}
+                        >
+                            Login
+                        </Link>
 
 
 
-                </div>
+                    </div>
+
+                
+
+
+                {/* customer-nav elem */}
+
+               
+                    <div className='elem' style={{display:val.customernav}}>
+                        <NavLink id='elemlink' to="/customer">Home</NavLink>
+                        <NavLink id='elemlink' to="">Profile</NavLink>
+                        <NavLink id='elemlink' to="/" onClick={()=> localStorage.clear()}>Log Out</NavLink>
+
+                    </div>
+               
+
+
+
                 <div className={`hamburger ${isMenuOpen ? 'cross' : ''} `} onClick={navopen} >
                     <div></div>
                     <div></div>
@@ -103,6 +121,7 @@ const Navbar = (val) => {
                 </div>
             </nav>
 
+           
 
             {/* for mobile view */}
 
@@ -119,14 +138,14 @@ const Navbar = (val) => {
                     id='elemlink'
                     onClick={toggleVisibility}
                 >
-                    {val.tab}
+                    Login
                 </Link>
 
             </div>
 
             {/* loginform */}
 
-            <div className='loginform_cnct' style={{width:'100%',display:'flex',justifyContent:'center',position:'fixed',zIndex:'99',top:'22vh'}}>
+            <div className='loginform_cnct' style={{ width: '100%', display: 'flex', justifyContent: 'center', position: 'fixed', zIndex: '99', top: '22vh' }}>
                 {
                     isVisible && (
                         <OtpSend />
@@ -137,8 +156,8 @@ const Navbar = (val) => {
             {/* contact icon wb , call */}
 
             <div className="cntcticon">
-                <div className="callicon" style={{ fontSize: '2.1rem' }}><i onClick={callredirect} class="ri-phone-fill"></i></div>
-                <div className="wbicon" style={{ fontSize: '2.4rem' }}><i onClick={whatsappHandle} class="ri-whatsapp-line"></i></div>
+                <div className="callicon" style={{ fontSize: '2.1rem' }}><i onClick={callredirect} className="ri-phone-fill"></i></div>
+                <div className="wbicon" style={{ fontSize: '2.4rem' }}><i onClick={whatsappHandle} className="ri-whatsapp-line"></i></div>
             </div>
         </>
     )

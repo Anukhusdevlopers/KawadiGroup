@@ -8,8 +8,8 @@ import BlogHeader from '../Blog/BlogHeader'
 const Blogpage = () => {
   return (
     <div>
-      <Navbar userdisplay="none" tab="Login" logindisplay="initial" onclickroute="/login" loginover="none" />
-      <BlogHeader/>
+        <Navbar userdisplay="none" customernav="none" mainnav="" logindisplay="initial" onclickroute="/login"  />
+        <BlogHeader/>
       <Blog />
       <Footer />
     </div>

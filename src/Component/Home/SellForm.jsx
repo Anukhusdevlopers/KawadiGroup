@@ -26,16 +26,16 @@ const SellForm = () => {
                     <div className="formsection">
                         <div className="icntray">
                             <div className="cir">
-                                <i class="ri-smartphone-line"></i>
+                                <i className="ri-smartphone-line"></i>
                             </div>
                             <div className="cir">
-                                <i class="ri-map-pin-2-line"></i>
+                                <i className="ri-map-pin-2-line"></i>
                             </div>
                             <div className="cir">
-                                <i class="ri-calendar-2-line"></i>
+                                <i className="ri-calendar-2-line"></i>
                             </div>
                             <div className="cir">
-                                <i class="ri-send-plane-line"></i>
+                                <i className="ri-send-plane-line"></i>
                             </div>
                         </div>
 
@@ -64,7 +64,7 @@ const SellForm = () => {
 
                         <div className="form" style={{display:schedule}}>
                             <input type="text" placeholder='Pickup Time' />
-                            <input type="email" placeholder='Enter Email'/>
+                            <input type="date" placeholder='Pickup Date'/>
                             <button onClick={()=>{setSchedule('none'); setAddress(''); }}>Back</button>
                             <button onClick={()=>{setSell(''); setSchedule('none'); }}>Proceed</button>
                         </div>
@@ -73,20 +73,20 @@ const SellForm = () => {
 
                         <div className="form" style={{display:sell}}>
                             <input type="text" placeholder='Type of Scrap' />
-                            <input type="radio" style={{ height:'2vh',width:'2vh'}} /> <p style={{marginRight:'2vh'}}>Sell</p>
-                            <input type="radio" style={{ height:'2vh',width:'2vh'}} /> <p style={{marginRight:'2vh'}}>Donate</p>
+                            <input type="radio" name='sell' style={{ height:'2vh',width:'2vh'}} /> <p style={{marginRight:'2vh'}}>Sell</p>
+                            <input type="radio" name='sell' style={{ height:'2vh',width:'2vh'}} /> <p style={{marginRight:'2vh'}}>Donate</p>
                             <button onClick={()=>{setSell('none'); setSchedule(''); }}>Back</button>
                             <button onClick={()=> { setSell('none'); setThank('');}}>Proceed</button>
                         </div>
 
                         <div className="form" style={{display:thank}}>
-                           <h2 style={{fontSize:'2.5rem'}}>Thank You !! </h2> 
+                           <h2 style={{fontSize:'2.5rem',fontFamily:'sans-serif'}}>Thank You !! </h2> 
                             {/* <br />
                            <p>Visit Again</p> */}
                         </div>
                     </div>
                     <div className="rgt_text">
-                        <h2>Sell or Donate your Scrap</h2>
+                        <h2>Sell or Donate  your Scraps Now!</h2>
                     </div>
                 </div>
             </div>

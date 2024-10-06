@@ -12,6 +12,8 @@ import VerifyOtp from "./Component/Login/VerifyOtp";
 import DeliveryBoy from "./Component/pages/DeliveryBoy";
 import Customerpage from "./Component/pages/Customerpage";
 import OtpSend from "./Component/Login/OtpSend";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 // import Navbar from "./Component/Home/Navbar";
 
 function Allroutes (){
@@ -19,6 +21,7 @@ function Allroutes (){
         <>
         {/* <Navbar/> */}
         <Router>
+            <ToastContainer/>
             <Routes>
              
                 <Route path="/" element={<Home />} />

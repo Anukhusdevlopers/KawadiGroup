@@ -8,8 +8,8 @@ import ContactHeader from '../Contact/ContactHeader'
 const Contactpage = () => {
   return (
     <div>
-      <Navbar userdisplay="none" tab="Login" logindisplay="initial" onclickroute="/login" loginover="none" />
-      <ContactHeader/>
+       <Navbar userdisplay="none" customernav="none" mainnav="" logindisplay="initial" onclickroute="/login"  />
+       <ContactHeader/>
       <Contact />
       <Feedback />
       <Footer />

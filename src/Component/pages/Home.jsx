@@ -20,7 +20,7 @@ const Home = (val) => {
 
   return (
     <>
-      <Navbar userdisplay="none" tab="Login" logindisplay="initial" onclickroute="/login" loginover="none" />
+      <Navbar userdisplay="none" customernav="none" mainnav="" logindisplay="initial" onclickroute="/login"  />
      <Header />
      <SellForm/>
       <Howitworks />

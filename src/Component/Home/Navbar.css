@@ -23,7 +23,7 @@ nav{
   font-family: sans-serif;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   gap: 3vh;
 }
 .elem #elemlink , #user{
@@ -103,7 +103,6 @@ nav{
   padding:2vh 5vh 5vh 5vh;
   flex-direction: column;
   display: flex;
-  display: none;
   gap: 2vh;
   z-index:100;
 }
@@ -123,15 +122,16 @@ nav{
 
 .cntcticon{
   height: 18vh;
-  width: 100%;
+  width:150px ;
+  right: 0;
   position: fixed;
-  z-index: 99;
   padding: 0 4vh;
   display: flex;
   flex-direction: column;
   align-items: end;
   justify-content: space-between;
   top: 77%;
+  z-index: 99;
 }
 .cntcticon .wbicon,.callicon{
   height: 7.5vh;
@@ -146,11 +146,6 @@ nav{
   cursor: pointer;
 }
 
-.topstrip{
-  height: 4vh;
-  width: 100%;
-  background-color: #368735;
-}
 
 @media(max-width:1300px){
 nav{
@@ -201,6 +196,9 @@ nav{
   .MY_logo img{
     width: 150px;
   }
+  .topstrip{
+    gap: 20vw;
+  }
 }
 @media(max-width:500px){
 nav{
@@ -223,6 +221,9 @@ nav{
 
 .cntcticon{
   top: 73%;
+}
+.topstrip{
+  display: none;
 }
 }
 

@@ -6,20 +6,18 @@ import Sell from '../Customer/Sell'
 import Pagination from '../Customer/Pagination'
 import CurrentLocationMapWithAddress from '../Customer/Map'
 import CurrentLocation from '../Customer/CurrentLocation'
+import Request from '../Customer/Request'
 
 const Customerpage = () => {
   return (
     <div> 
-        <Navbar userdisplay="none"  tab="User" onclickroute="/afterlogin" loginover="none"/>
-    
+          <Navbar userdisplay="none" customernav="" mainnav="none" logindisplay="initial" onclickroute="/login"  />
+   
         <CustomerHeader/>
         <CurrentLocation/>
-        {/* <CurrentLocationMapWithAddress/> */}
         <Sell/>
-        {/* <Pagination/> */}
-            
+        <Request/>
         <Footer/>
-        {/* <CurrentLocationMapWithAddress/> */}
     </div>
   )
 }

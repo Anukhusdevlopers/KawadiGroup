@@ -5,6 +5,8 @@ import axios from 'axios';
 
 // Set up the container style for the map
 const containerStyle = {
+
+
   width: '100%',
   height: '400px',  
 };
@@ -19,6 +21,11 @@ const CurrentLocationMapWithAddress = () => {
   const [address, setAddress] = useState(null);
   const [error, setError] = useState(null);
 
+  // for locol storage
+  const [lsAddress, setLsAddress] = useState();
+  
+  localStorage.setItem('address', lsAddress);
+
   // Load Google Maps API
   const { isLoaded, loadError } = useJsApiLoader({
     googleMapsApiKey: GOOGLE_MAPS_API_KEY,
@@ -31,6 +38,13 @@ const CurrentLocationMapWithAddress = () => {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
+
+
+
+          // Save latitude and longitude to localStorage
+          localStorage.setItem('latitude', latitude);
+          localStorage.setItem('longitude', longitude);
+
           setCoordinates({ latitude, longitude });
           fetchAddress(latitude, longitude); // Fetch address using OpenCage API
           setError(null); // Clear any previous errors
@@ -54,6 +68,9 @@ const CurrentLocationMapWithAddress = () => {
 
       if (response.data && response.data.results && response.data.results.length > 0) {
         setAddress(response.data.results[0].formatted);
+        setLsAddress(response.data.results[0].formatted);
+       
+
       } else {
         setError("Unable to fetch address.");
       }
@@ -81,7 +98,9 @@ const CurrentLocationMapWithAddress = () => {
         <div>
           {/* <p><strong>Latitude:</strong> {coordinates.latitude}</p>
           <p><strong>Longitude:</strong> {coordinates.longitude}</p> */}
-          {/* <p><strong>Your Location:</strong> {address ? address : 'Fetching address...'}</p> */}
+          
+
+          <p ><strong>Your Location:</strong> {address ? address : 'Fetching address...'}</p>
 
           {/* Display the Google Map */}
           <GoogleMap

@@ -13,11 +13,14 @@ const CustomerHeader = () => {
   }, []);
 
 
+  const storedname = localStorage.getItem('name');
+
+
   return (
     <>
       <div className="customerHeader" data-aos="zoom-in">
         {/* <h1>Customer</h1> */}
-        <h1>Hi, Khushboo</h1>
+        <h1>Hi, {storedname} </h1>
       </div>
     </>
   );

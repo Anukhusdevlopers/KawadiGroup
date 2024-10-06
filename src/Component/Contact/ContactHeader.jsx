@@ -16,7 +16,7 @@ const ContactHeader = () => {
   return (
     <>
       <div className="ContactHeader" data-aos="zoom-in">
-        {/* <h1>Contact Us</h1> */}
+        <h1>Contact Us</h1>
       </div>
     </>
   );
